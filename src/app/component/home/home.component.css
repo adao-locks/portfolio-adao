@@ -1,0 +1,18 @@
+.container_home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 550px;
+}
+
+.home_content {
+    margin-left: 6.5rem;
+}
+
+h1 {
+    font-size: 50px;
+}
+
+p {
+    font-size: 14px;
+}
