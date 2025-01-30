@@ -3,14 +3,21 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    background-color: rgb(173, 173, 173);
-    box-shadow: 0 0 10px 7px rgba(143, 143, 143, 0.4);
+    background-color: rgb(68, 68, 68);
+    box-shadow: 0 0 10px 7px rgba(49, 49, 49, 0.4);
     padding: 1rem 0;
 }
 
 .container_name {
     width: 40%;
     margin-left: 10%;
+    display: flex;
+    flex-direction: row;
+}
+
+.container_name > p {
+    margin-left: 10px;
+    cursor: default;
 }
 
 .container_nav{

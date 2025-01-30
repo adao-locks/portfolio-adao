@@ -1,0 +1,31 @@
+.container_contact_main{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.container_contact {
+    max-width: 500px;
+    padding: 50px;
+    border-radius: 8px;
+    background-color: #3b3b3b;
+}
+
+h2 {
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+form {
+    padding: 10px;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}

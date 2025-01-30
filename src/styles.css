@@ -5,6 +5,7 @@
     font-size: 18px;
     font-weight: 400;
     color: rgb(241, 241, 241);
+    cursor: default;
 }
 
 body {
