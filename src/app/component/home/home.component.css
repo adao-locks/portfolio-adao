@@ -1,18 +1,29 @@
 .container_home {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 550px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 550px;
+  padding: 0 6.5rem;
 }
 
 .home_content {
-    margin-left: 6.5rem;
+  flex: 1;
+  margin-left: 10rem;
 }
 
 h1 {
-    font-size: 50px;
+  font-size: 50px;
 }
 
 p {
-    font-size: 14px;
+  font-size: 14px;
+}
+
+.home_image {
+  width: 200px;
+  height: 200px;
+  margin-right: 10rem;
+  transform: scaleX(-1);
+  border-radius: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
