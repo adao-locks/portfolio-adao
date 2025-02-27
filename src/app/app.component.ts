@@ -23,5 +23,5 @@ import { ProjectsComponent } from "./component/projects/projects.component";
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'nome-do-projeto';
+  title = 'Portfolio | Eduardo Adao Locks';
 }
