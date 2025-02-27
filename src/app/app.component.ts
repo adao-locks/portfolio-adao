@@ -5,6 +5,7 @@ import { HomeComponent } from "./component/home/home.component";
 import { SkillstreeComponent } from "./component/skillstree/skillstree.component";
 import { ContatoComponent } from "./component/contact/contact.component";
 import { AboutComponent } from "./component/about/about.component";
+import { ProjectsComponent } from "./component/projects/projects.component";
 
 @Component({
   selector: 'app-root',
@@ -15,7 +16,8 @@ import { AboutComponent } from "./component/about/about.component";
     HomeComponent,
     SkillstreeComponent,
     ContatoComponent,
-    AboutComponent
+    AboutComponent,
+    ProjectsComponent
 ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'

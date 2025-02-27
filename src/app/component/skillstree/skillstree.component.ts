@@ -4,9 +4,7 @@ import { NgOptimizedImage } from '@angular/common'
 @Component({
   selector: 'app-skillstree',
   standalone: true,
-  imports: [
-    NgOptimizedImage
-  ],
+  imports: [],
   templateUrl: './skillstree.component.html',
   styleUrl: './skillstree.component.css'
 })
