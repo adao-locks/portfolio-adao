@@ -5,7 +5,8 @@ h2 {
 
 .general {
   display: flex;
-  height: 650px;
+  height: 65vh;
+  width: 100vw;
   align-items: center;
   justify-content: center;
   align-content: center;
