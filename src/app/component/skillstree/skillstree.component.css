@@ -1,48 +1,112 @@
-.container_skills {
+
+@media (min-width: 768px) {
+  .container_skills {
     display: flex;
     flex-direction: column;
+  }
+
+  .skillstree {
+      display: flex;
+      flex-direction: column;
+      padding: 6rem;
+  }
+
+  .container_skillstree {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+  }
+
+  H2 {
+      margin-left: 10vw;
+      font-size: 2rem;
+      font-weight: bolder;
+  }
+
+  .skill_card {
+      background-color: #ffdd3463;
+      width: 20vw;
+      height: min-content;
+      margin: .7rem;
+      padding: 2rem;
+      font-weight: 500;
+      border-radius: 10px;
+      box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.17);
+  }
+
+  .skill_card > h4 {
+      margin-top: 1rem;
+      font-size: 12px;
+  }
+
+  .skill_card > p {
+      margin-top: .5rem;
+      text-align: justify;
+  }
+
+  img {
+    width: 40px;
+    margin-bottom: -7px;
+  }
 }
 
-.skillstree {
+/* ---------------------------------------------------------- */
+/* ---------------------------------------------------------- */
+/* ---------------------------------------------------------- */
+
+@media (min-width: 768px) and (max-width: 1072px) {
+  .skill_card {
+    width: 40vw;
+  }
+}
+
+@media (max-width: 767px) {
+  .container_skills {
     display: flex;
     flex-direction: column;
-    padding: 6rem;
-}
+  }
 
-.container_skillstree {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
+  .skillstree {
+      display: flex;
+      flex-direction: column;
+      padding: 6rem 2rem;
+  }
 
-H2 {
-    margin-left: 10%;
-    font-size: 35px;
-    font-weight: bold;
-}
+  .container_skillstree {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+  }
 
-.skill_card {
-    background-color: #ffdd3463;
-    width: 22rem;
-    height: 20rem;
-    margin: 10px;
-    padding: 2rem;
-    font-weight: 500;
-    border-radius: 10px;
-    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.17);
-}
+  H2 {
+      margin-left: 10vw;
+      font-size: 2rem;
+      font-weight: bolder;
+  }
 
-.skill_card > h4 {
-    margin-top: 1rem;
-    font-size: 12px;
-}
+  .skill_card {
+      background-color: #ffdd3463;
+      width: 50vw;
+      height: min-content;
+      margin: .7rem;
+      padding: 2rem;
+      font-weight: 500;
+      border-radius: 10px;
+      box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.17);
+  }
 
-.skill_card > p {
-    margin-top: .5rem;
-    text-align: justify;
-}
+  .skill_card > h4 {
+      margin-top: 1rem;
+      font-size: 12px;
+  }
 
-img {
-  width: 40px;
-  margin-bottom: -7px;
+  .skill_card > p {
+      margin-top: .5rem;
+      text-align: justify;
+  }
+
+  img {
+    width: 40px;
+    margin-bottom: -7px;
+  }
 }

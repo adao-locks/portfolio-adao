@@ -1,20 +1,31 @@
+@media (min-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+  p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 767px) {
+  h1 {
+    font-size: 1.1rem;
+  }
+  p {
+    font-size: 0.75rem;
+  }
+}
+
 .container_home {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 550px;
-  padding: 0 6.5rem;
+  height: 70vh;
+  padding: 0 7vw;
 }
 
 .home_content {
   flex: 1;
-  margin-left: 10rem;
+  margin-left: 2vw;
 }
 
-h1 {
-  font-size: 50px;
-}
-
-p {
-  font-size: 14px;
-}
