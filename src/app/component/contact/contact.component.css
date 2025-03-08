@@ -126,3 +126,13 @@ button:hover .button-text {
 .contato-container {
   margin-bottom: 5rem;
 }
+
+@media (max-width: 767px) {
+  .contato-container {
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+  }
+}

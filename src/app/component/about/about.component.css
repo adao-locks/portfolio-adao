@@ -32,13 +32,15 @@ h2 {
 .container_text_techs {
   display: flex;
   flex-wrap: wrap;
-  flex-direction: row;
+  justify-content: center; /* Alinha as techs no centro horizontal */
+  align-items: center; /* Alinha as techs no centro vertical */
 }
 
 .tech {
-  width: 5rem;
+  width: 4.5rem;
   display: flex;
   justify-content: center;
+  align-items: center; /* Garante que o conteúdo dentro de cada .tech seja centralizado */
   border-radius: 1rem;
   background-color: #ffde34;
   border: none;
