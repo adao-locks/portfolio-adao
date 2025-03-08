@@ -91,11 +91,13 @@
     font-size: 30px;
     font-weight: bold;
     text-align: center;
+    width: 100vw;
   }
 
   .general {
     display: flex;
     height: 120vh;
+    width: 100vw;
     align-items: center;
     justify-content: center;
     align-content: center;
@@ -123,7 +125,7 @@
   }
 
   img {
-    width: 20rem;
+    width: 80vw;
     height: 11rem;
     cursor: pointer;
     border-radius: 5px;
@@ -138,6 +140,7 @@
   p {
     text-decoration: none;
     text-align: center;
+    width: 100vw;
   }
 
   .project {

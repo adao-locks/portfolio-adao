@@ -37,11 +37,13 @@ a {
   .container_navbar {
     visibility: hidden;
     height: 0vh;
+    width: 0vw;
   }
 }
 
 @media (min-width: 768px) {
   .container_navbar {
     visibility: visible;
+    display: none;
   }
 }

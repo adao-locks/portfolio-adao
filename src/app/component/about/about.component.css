@@ -5,8 +5,8 @@ h2 {
 
 .general {
   display: flex;
-  height: 65vh;
-  width: 99.2vw;
+  height: 75vh;
+  width: 99vw;
   align-items: center;
   justify-content: center;
   align-content: center;
@@ -64,4 +64,10 @@ img {
   width: 20vw;
   border-radius: 40%;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 767px) {
+  .general {
+    width: 100vw;
+  }
 }
