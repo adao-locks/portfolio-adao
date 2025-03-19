@@ -44,6 +44,5 @@ a {
 @media (min-width: 768px) {
   .container_navbar {
     visibility: visible;
-    display: none;
   }
 }

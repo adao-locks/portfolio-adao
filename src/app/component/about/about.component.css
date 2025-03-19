@@ -1,6 +1,8 @@
+
 h2 {
   font-size: 30px;
   font-weight: bold;
+  text-align: center;
 }
 
 .general {
@@ -17,7 +19,6 @@ h2 {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  width: 100vw;
   height: 25rem;
 }
 
@@ -71,5 +72,14 @@ img {
 @media (max-width: 767px) {
   .general {
     width: 100vw;
+  }
+  p {
+    width: 80vw;
+  }
+  img {
+    width: 40vw;
+  }
+  .container_text {
+    align-items: center;
   }
 }
