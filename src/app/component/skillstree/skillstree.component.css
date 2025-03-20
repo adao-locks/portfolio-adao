@@ -3,6 +3,7 @@
   .container_skills {
     display: flex;
     flex-direction: column;
+    width: 100vw;
   }
 
   .skillstree {
@@ -86,7 +87,7 @@
 
   .skill_card {
       background-color: #ffdd3463;
-      width: 50vw;
+      width: 67vw;
       height: min-content;
       margin: .7rem;
       padding: 2rem;

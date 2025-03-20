@@ -22,6 +22,10 @@
   }
 }
 
+.home {
+  width: 100vw;
+}
+
 .container_home {
   display: flex;
   justify-content: space-between;
