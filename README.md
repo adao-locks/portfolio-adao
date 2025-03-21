@@ -3,6 +3,10 @@
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.7.
 Visit the online page [here](https://portfolio-adao.vercel.app/)
 
+## Packages install
+
+Run `npm install` for install all packages. They must be installed to run the project.
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
