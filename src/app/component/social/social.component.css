@@ -4,7 +4,7 @@
   align-items: center;
   margin-top: 5rem;
   margin-bottom: 2rem;
-  width: 100vw;
+  background-color: transparent;
 }
 
 a {
@@ -20,7 +20,7 @@ img {
 
   img {
     margin-top: 1rem;
-    width: 15vw;
+    width: 13vw;
   }
 
 }

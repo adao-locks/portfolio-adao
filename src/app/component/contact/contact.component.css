@@ -8,7 +8,6 @@
 }
 
 body {
-  font-family: 'Mukta', sans-serif;
   font-size: 1rem;
   line-height: 1.5;
   display: flex;
@@ -16,11 +15,7 @@ body {
   justify-content: center;
   margin: 0;
   min-height: 100vh;
-  background: #000;
-}
-
-.contato-container {
-  width: 100vw;
+  background: var(--bc);
 }
 
 button {
@@ -49,7 +44,7 @@ button.learn-more .circle {
   margin: 0;
   width: 3rem;
   height: 3rem;
-  background: #ffde34;
+  background: var(--pc);
   border-radius: 1.625rem;
 }
 
@@ -77,8 +72,8 @@ button.learn-more .circle .icon.arrow::before {
   right: 0.0625rem;
   width: 0.625rem;
   height: 0.625rem;
-  border-top: 0.125rem solid #000;
-  border-right: 0.125rem solid #000;
+  border-top: 0.125rem solid var(--bc);
+  border-right: 0.125rem solid var(--bc);
   transform: rotate(45deg);
 }
 
@@ -91,7 +86,7 @@ button.learn-more .button-text {
   bottom: 0;
   padding: 0.75rem 0;
   margin: 0 0 0 1.85rem;
-  color: #ffde34;
+  color: var(--pc);
   font-weight: 700;
   line-height: 1.6;
   text-align: center;
@@ -103,12 +98,12 @@ button:hover .circle {
 }
 
 button:hover .circle .icon.arrow {
-  background: #000;
+  background: var(--bc);
   transform: translate(1rem, 0);
 }
 
 button:hover .button-text {
-  color: #000;
+  color: var(--bc);
 }
 
 @supports (display: grid) {

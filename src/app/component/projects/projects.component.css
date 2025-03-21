@@ -9,12 +9,11 @@
   .general {
     display: flex;
     height: 100vh;
-    width: 100vw;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     margin-bottom: 15vh;
-    background-color: rgb(26, 26, 26);
+    background-color: var(--fc);
     min-height: calc(100vh + 5rem);
   }
 
@@ -65,8 +64,8 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background: rgba(0, 0, 0, 0.3);
-    color: yellow;
+    background: var(--fc);
+    color: var(--tc);
     padding: 10px 15px;
     border-radius: 5px;
     font-size: 1.5rem;
@@ -114,7 +113,7 @@
     align-items: center;
     justify-content: center;
     align-content: center;
-    background-color: rgb(26, 26, 26);
+    background-color: var(--fc);
     margin-bottom: 5rem;
   }
 
@@ -171,7 +170,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     background: rgba(0, 0, 0, 0.3);
-    color: yellow;
+    color: var(--tc);
     padding: 10px 15px;
     border-radius: 5px;
     font-size: 16px;

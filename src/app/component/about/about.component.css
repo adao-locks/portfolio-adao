@@ -7,12 +7,11 @@ h2 {
 
 .general {
   display: flex;
-  height: 75vh;
-  width: 100vw;
+  height: 90vh;
   align-items: center;
   justify-content: center;
   align-content: center;
-  background-color: rgb(26, 26, 26);
+  background-color: var(--fc);
 }
 
 .general_mid {
@@ -20,7 +19,6 @@ h2 {
   justify-content: center;
   flex-direction: column;
   height: 25rem;
-  width: 100vw;
 }
 
 .container_text {
@@ -44,9 +42,9 @@ h2 {
   justify-content: center;
   align-items: center; /* Garante que o conteúdo dentro de cada .tech seja centralizado */
   border-radius: 1rem;
-  background-color: #ffde34;
+  background-color: var(--sc);
   border: none;
-  color: black;
+  color: var(--tc);
   font-size: .7rem;
   margin: 1vw;
   padding: 2px;
@@ -56,7 +54,6 @@ h2 {
 .container_img {
   display: flex;
   justify-content: center;
-  width: 100vw;
 }
 
 .container_text_about > p {
@@ -72,10 +69,9 @@ img {
 
 @media (max-width: 767px) {
   .general {
-    width: 100vw;
   }
   p {
-    width: 80vw;
+    width: 14.5rem;
   }
   img {
     width: 40vw;
