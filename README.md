@@ -1,6 +1,6 @@
 # Portfolio
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.7.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.7. <br>
 Visit the online page [here](https://portfolio-adao.vercel.app/)
 
 ## Packages install
