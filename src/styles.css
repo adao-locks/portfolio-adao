@@ -1,3 +1,8 @@
+@import './styles/reset.css';
+@import './styles/base.css';
+@import './styles/layout.css';
+@import './styles/components.css';
+@import './styles/utilities.css';
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Yantramanav:wght@100;300;400;500;700;900&display=swap');
 
 :root {
