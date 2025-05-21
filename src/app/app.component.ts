@@ -7,6 +7,7 @@ import { AboutComponent } from "./component/about/about.component";
 import { ProjectsComponent } from "./component/projects/projects.component";
 import { SocialComponent } from "./component/social/social.component";
 import { ContactComponent } from './component/contact/contact.component';
+import { MessageComponent } from "./component/message/message.component";
 
 @Component({
   selector: 'app-root',
@@ -19,7 +20,8 @@ import { ContactComponent } from './component/contact/contact.component';
     ContactComponent,
     AboutComponent,
     ProjectsComponent,
-    SocialComponent
+    SocialComponent,
+    MessageComponent
 ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
