@@ -1,11 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Yantramanav:wght@100;300;400;500;700;900&display=swap');
+@import './styles/reset.css';
+@import './styles/base.css';
+@import './styles/layout.css';
+@import './styles/components.css';
+@import './styles/utilities.css';
 
 :root {
-  --pc: #168d47;
-  --sc: #02571e;
+  --pc: #3b82f6;
+  --sc: #60a5fa;
   --tc: #ebebeb;
-  --bc: #1b1b1b;
-  --fc: #292929;
+  --bc: #0f172a;
+  --fc: #1e293b;
 }
 
 * {
@@ -16,8 +20,4 @@
     font-weight: 400;
     color: var(--tc);
     cursor: default;
-}
-
-body {
-    background-color: var(--bc);
 }

@@ -1,0 +1,18 @@
+/* reset.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #0f172a; /* azul-escuro moderno */
+  color: #f8fafc; /* quase branco */
+  line-height: 1.6;
+  font-size: 16px;
+}

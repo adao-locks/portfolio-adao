@@ -1,32 +1,40 @@
 import { Component } from '@angular/core';
-import { FormsModule } from '@angular/forms'; // ✅ IMPORTADO
+import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
+import emailjs from '@emailjs/browser';
+import { MessageService } from '../../service/message.service';
 
 @Component({
-  selector: 'app-contato',
+  selector: 'app-contact',
   standalone: true,
-  imports: [FormsModule],
+  imports: [CommonModule, FormsModule],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.css'
 })
-export class ContatoComponent {
-  name: string = '';
-  email: string = '';
-  message: string = '';
+export class ContactComponent {
+  name = '';
+  email = '';
+  message = '';
 
-  enviarFormulario() {
-    if (this.name && this.email && this.message) {
-      console.log('Formulário enviado com sucesso!', {
-        nome: this.name,
-        email: this.email,
-        mensagem: this.message
+  constructor(private messageService: MessageService) {}
+
+  sendEmail() {
+    const templateParams = {
+      name: this.name,
+      email: this.email,
+      message: this.message,
+    };
+
+    emailjs
+      .send('service_s7sjroq', 'template_qhxeavg', templateParams, 'qhPAH8comcyGlcslc')
+      .then(() => {
+        this.messageService.showMessage('Mensagem enviada com sucesso!');
+        this.name = '';
+        this.email = '';
+        this.message = '';
+      })
+      .catch(() => {
+        this.messageService.showMessage('Erro ao enviar mensagem.');
       });
-
-      alert('Mensagem enviada com sucesso!');
-      this.name = '';
-      this.email = '';
-      this.message = '';
-    } else {
-      alert('Por favor, preencha todos os campos.');
-    }
   }
 }
