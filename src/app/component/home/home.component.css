@@ -1,36 +1,3 @@
-@media (min-width: 768px) {
-  h1 {
-    font-size: 2rem;
-  }
-  p {
-    font-size: 1rem;
-  }
-  .container_home {
-    height: 95vh;
-  }
+.manual {
+  padding: 30vh 0;
 }
-
-@media (max-width: 767px) {
-  h1 {
-    font-size: 1.1rem;
-  }
-  p {
-    font-size: 0.75rem;
-  }
-  .container_home {
-    height: 100vh;
-  }
-}
-
-.container_home {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 7vw;
-}
-
-.home_content {
-  flex: 1;
-  margin-left: 2vw;
-}
-

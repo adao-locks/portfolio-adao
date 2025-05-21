@@ -5,6 +5,14 @@
   box-sizing: border-box;
 }
 
-html, body {
-  height: 100%;
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #0f172a; /* azul-escuro moderno */
+  color: #f8fafc; /* quase branco */
+  line-height: 1.6;
+  font-size: 16px;
 }

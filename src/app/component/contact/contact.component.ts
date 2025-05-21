@@ -1,32 +1,45 @@
 import { Component } from '@angular/core';
-import { FormsModule } from '@angular/forms'; // ✅ IMPORTADO
+import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
+import emailjs from '@emailjs/browser';
 
 @Component({
-  selector: 'app-contato',
+  selector: 'app-contact',
   standalone: true,
-  imports: [FormsModule],
+  imports: [CommonModule, FormsModule],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.css'
 })
-export class ContatoComponent {
+export class ContactComponent {
   name: string = '';
   email: string = '';
   message: string = '';
+  sent: boolean = false;
+  error: boolean = false;
 
-  enviarFormulario() {
-    if (this.name && this.email && this.message) {
-      console.log('Formulário enviado com sucesso!', {
-        nome: this.name,
-        email: this.email,
-        mensagem: this.message
-      });
+  sendEmail() {
+    const templateParams = {
+      from_name: this.name,
+      reply_to: this.email,
+      message: this.message,
+    };
 
-      alert('Mensagem enviada com sucesso!');
-      this.name = '';
-      this.email = '';
-      this.message = '';
-    } else {
-      alert('Por favor, preencha todos os campos.');
-    }
+    emailjs
+      .send('service_s7sjroq', 'template_qhxeavg', templateParams, 'qhPAH8comcyGlcslc')
+      .then(
+        () => {
+          this.sent = true;
+          this.error = false;
+          this.name = '';
+          this.email = '';
+          this.message = '';
+          // alert("Mensagem enviada com sucesso, Obrigado!");
+        },
+        () => {
+          this.sent = false;
+          this.error = true;
+          // alert("Ocorreu um erro no processo, tente novamente mais tarde!");
+        }
+      );
   }
 }
