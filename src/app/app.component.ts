@@ -8,6 +8,7 @@ import { ProjectsComponent } from "./component/projects/projects.component";
 import { SocialComponent } from "./component/social/social.component";
 import { ContactComponent } from './component/contact/contact.component';
 import { MessageComponent } from "./component/message/message.component";
+import { ExperiencesComponent } from "./component/experiences/experiences.component";
 
 @Component({
   selector: 'app-root',
@@ -21,7 +22,8 @@ import { MessageComponent } from "./component/message/message.component";
     AboutComponent,
     ProjectsComponent,
     SocialComponent,
-    MessageComponent
+    MessageComponent,
+    ExperiencesComponent
 ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
