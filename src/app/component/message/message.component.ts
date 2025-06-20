@@ -3,10 +3,9 @@ import { MessageService } from '../../service/message.service';
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'app-message',
-  standalone: true,
-  imports: [CommonModule],
-  template: `
+    selector: 'app-message',
+    imports: [CommonModule],
+    template: `
     <div
       *ngIf="messageService.message$ | async as message"
       class="message-toast"
@@ -14,7 +13,7 @@ import { CommonModule } from '@angular/common';
       {{ message }}
     </div>
   `,
-  styles: [`
+    styles: [`
     .message-toast {
       position: fixed;
       top: 1rem;

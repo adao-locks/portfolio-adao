@@ -11,22 +11,21 @@ import { MessageComponent } from "./component/message/message.component";
 import { ExperiencesComponent } from "./component/experiences/experiences.component";
 
 @Component({
-  selector: 'app-root',
-  standalone: true,
-  imports: [
-    RouterOutlet,
-    NavbarComponent,
-    HomeComponent,
-    SkillstreeComponent,
-    ContactComponent,
-    AboutComponent,
-    ProjectsComponent,
-    SocialComponent,
-    MessageComponent,
-    ExperiencesComponent
-],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+    selector: 'app-root',
+    imports: [
+        RouterOutlet,
+        NavbarComponent,
+        HomeComponent,
+        SkillstreeComponent,
+        ContactComponent,
+        AboutComponent,
+        ProjectsComponent,
+        SocialComponent,
+        MessageComponent,
+        ExperiencesComponent
+    ],
+    templateUrl: './app.component.html',
+    styleUrl: './app.component.css'
 })
 export class AppComponent {
   title = 'Portfolio | Eduardo Adao Locks';
