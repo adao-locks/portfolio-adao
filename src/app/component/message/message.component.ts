@@ -6,13 +6,14 @@ import { CommonModule } from '@angular/common';
     selector: 'app-message',
     imports: [CommonModule],
     template: `
-    <div
-      *ngIf="messageService.message$ | async as message"
-      class="message-toast"
-    >
-      {{ message }}
-    </div>
-  `,
+    @if (messageService.message$ | async; as message) {
+      <div
+        class="message-toast"
+        >
+        {{ message }}
+      </div>
+    }
+    `,
     styles: [`
     .message-toast {
       position: fixed;
