@@ -1,0 +1,48 @@
+<section id="projeto-detail" class="section">
+  <div class="container">
+
+    <a (click)="backToPortfolio()" class="btn mb-4 text-center">← Voltar para Projetos</a>
+
+    <h1 class="text-center mb-3">Rel Control</h1>
+
+    <p class="text-center mb-4">
+      Sistema em Flutter para controle de arquivos, desenvolvido para facilitar a organização e acesso rápido a documentos importantes.
+    </p>
+
+    <div class="project-image text-center mb-4">
+      <img src="assets/img/projeto-relcontrol.png" alt="Imagem do projeto Rel Control">
+    </div>
+
+    <div class="project-tech mb-4">
+      <h3>Tecnologias utilizadas:</h3>
+      <ul class="tech-list">
+        <li>Flutter</li>
+          <li>Dart</li>
+          <li>Shared Preferences</li>
+          <li>Flutter Archive</li>
+        <li>PostgreSQL</li>
+      </ul>
+    </div>
+
+    <div class="project-description mb-4">
+      <h3>Problema</h3>
+      <p>
+        Durante minhas atividades no suporte técnico responsável pelo módulo de relatórios de um sistema empresarial, identifiquei uma deficiência crítica na gestão dos arquivos de relatório — tanto nos templates padrão fornecidos pela empresa quanto nos modelos customizados desenvolvidos sob demanda.
+        <br> <br>
+        O fluxo atual mantinha os relatórios exclusivamente no ambiente do cliente. Sempre que um novo relatório era criado ou um modelo existente era personalizado, o arquivo era editado e armazenado diretamente no servidor local do cliente. Esse processo apresentava um risco operacional significativo: em casos de falhas no servidor, corrupção de dados ou exclusões acidentais, os arquivos eram perdidos permanentemente, pois não existia um mecanismo centralizado de versionamento, backup ou sincronização em um repositório seguro.
+      </p>
+      <br>
+
+      <h3>Solução</h3>
+      <p>
+        O Rel Control permite que o técnico registre cada modificação realizada em um relatório, vinculando a edição à respectiva tela e opção de impressão onde o modelo é utilizado. Dessa forma, o sistema mantém um histórico centralizado que funciona como backup tanto para os relatórios personalizados de cada cliente quanto para os templates padrão da empresa, garantindo rastreabilidade, integridade e recuperação segura dos arquivos.
+      </p>
+      <br>
+    </div>
+
+    <div class="project-links text-center">
+      <a href="https://github.com/adao-locks/rel-control" target="_blank" class="btn mr-2">Ver no GitHub</a>
+    </div>
+
+  </div>
+</section>
