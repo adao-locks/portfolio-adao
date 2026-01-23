@@ -24,13 +24,16 @@ export class ProjectAComponent {
     this.route.queryParams.subscribe(params => {
       const id = params['foco'];
 
-      if (id && isPlatformBrowser(this.platformId)) {  // ← prevent SSR crash
+      if (id && isPlatformBrowser(this.platformId)) { // SSR safe
         setTimeout(() => {
-          const el = document.getElementById(id);
-          el?.scrollIntoView({ behavior: 'smooth' });
-          el?.focus();
+          window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+          });
+          (document.activeElement as HTMLElement)?.blur();
         }, 50);
       }
     });
   }
+
 }
