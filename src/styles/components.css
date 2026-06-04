@@ -1,40 +1,67 @@
-/* components.css */
 .btn {
-  padding: 0.75rem 1.5rem;
-  background-color: #3b82f6;
-  color: #fff;
-  border: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 0.82rem 1.2rem;
+  border: 1px solid rgba(255, 255, 255, 0.18);
   border-radius: 8px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background 0.3s ease;
+  background: linear-gradient(135deg, var(--pc), #5de2bf);
+  color: #061016;
+  font-weight: 700;
+  box-shadow: 0 14px 30px rgba(38, 198, 218, 0.2);
 }
 
 .btn:hover {
-  background-color: #2563eb;
+  color: #061016;
+  transform: translateY(-2px);
+  text-decoration: none;
+}
+
+.btn.secondary {
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--tc);
+  box-shadow: none;
 }
 
 .card {
-  background-color: #1e293b;
-  padding: 2rem;
-  border-radius: 12px;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.3);
-  transition: transform 0.3s ease;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  min-height: 100%;
+  padding: 1.35rem;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.075), rgba(255, 255, 255, 0.035));
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  transition: transform 0.22s ease, border-color 0.22s ease;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto;
+  height: 3px;
+  background: linear-gradient(90deg, var(--pc), var(--sc), var(--accent));
 }
 
 .card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-4px);
+  border-color: rgba(38, 198, 218, 0.42);
 }
 
-.header {
-  background-color: #0f172a;
-  padding: 1rem 0;
-}
-
-.footer {
-  background-color: #0f172a;
-  text-align: center;
-  padding: 2rem 0;
-  font-size: 0.9rem;
-  color: #94a3b8;
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  padding: 0.35rem 0.7rem;
+  border: 1px solid rgba(38, 198, 218, 0.28);
+  border-radius: 999px;
+  color: var(--pc);
+  background: rgba(38, 198, 218, 0.08);
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: uppercase;
 }

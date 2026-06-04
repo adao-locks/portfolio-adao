@@ -17,13 +17,14 @@ import { CommonModule } from '@angular/common';
     styles: [`
     .message-toast {
       position: fixed;
-      top: 1rem;
+      top: 6.5rem;
       right: 1rem;
-      background: #0f172a;
-      color: #f8fafc;
+      background: rgba(10, 13, 20, 0.92);
+      color: var(--tc);
       padding: 1rem 1.5rem;
-      border-radius: 0.5rem;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      box-shadow: var(--shadow);
       z-index: 9999;
       transition: all 0.3s ease-in-out;
     }

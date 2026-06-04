@@ -1,6 +1,15 @@
-<section id="contato" class="section">
-  <div class="container">
-    <h2 class="text-center mb-4">Entre em Contato</h2>
+<section id="contato" class="section contact-section">
+  <div class="container contact-grid">
+    <div class="contact-copy">
+      <span class="eyebrow">Contato</span>
+      <h2>Vamos construir algo?</h2>
+      <p>Envie uma mensagem com sua ideia, oportunidade ou projeto. Eu retorno assim que possível.</p>
+
+      <a href="https://wa.me/5547992006045" target="_blank" class="btn secondary" aria-label="Fale comigo no WhatsApp">
+        Chamar no WhatsApp
+      </a>
+    </div>
+
     <form class="form" (submit)="sendEmail(); $event.preventDefault()">
       <div class="grid grid-2">
         <div>
@@ -16,20 +25,7 @@
         <label for="message">Mensagem</label>
         <textarea id="message" [(ngModel)]="message" name="message" rows="5" required></textarea>
       </div>
-      <div class="text-center mt-4">
-        <button type="submit" class="btn">Enviar</button>
-      </div>
-
-      <h2 class="text-center mb-4 mt-4">Ou</h2>
-
-      <div class="text-center mt-4">
-        <a href="https://wa.me/5547992006045"
-          target="_blank"
-          class="btn whatsapp-btn"
-          aria-label="Fale comigo no WhatsApp">
-          💬 Chame no WhatsApp
-        </a>
-      </div>
+      <button type="submit" class="btn mt-4">Enviar mensagem</button>
     </form>
   </div>
 </section>
