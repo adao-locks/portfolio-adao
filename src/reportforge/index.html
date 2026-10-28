@@ -1,0 +1,612 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ReportForge · Designer de relatórios para Windows</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Designer de relatórios para Windows: monte o layout em bandas, ligue ao banco com SQL e exporte para PDF, HTML ou CSV.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Instrument+Sans:wght@400..700&family=JetBrains+Mono:wght@400;600&display=swap">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#inicio"><span class="brand-mark" aria-hidden="true"></span>ReportForge</a>
+    <nav class="nav" aria-label="Seções">
+      <a href="#recursos">Recursos</a>
+      <a href="#erp">Para ERPs</a>
+      <a href="#atalhos">Atalhos</a>
+      <a href="#perguntas">Dúvidas</a>
+    </nav>
+    <a class="btn btn-primary btn-small" href="#contato">Pedir demonstração</a>
+  </div>
+</header>
+
+<main id="inicio">
+  <!-- ===== Abertura ===== -->
+  <div class="hero">
+    <div class="wrap">
+      <div class="hero-text">
+        <span class="eyebrow">Designer de relatórios para Windows · .NET 8 e 10</span>
+        <h1>Desenhe o relatório, ligue ao banco e <em>gere o PDF.</em></h1>
+        <p class="lead">Monte o layout em bandas arrastando textos, tabelas e imagens. Ligue cada campo a uma consulta SQL e exporte para PDF, HTML ou CSV. O mesmo modelo também roda dentro do seu ERP, sem abrir o designer.</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="#contato">Pedir uma demonstração</a>
+          <a class="btn btn-ghost" href="#erp">Integrar no meu sistema</a>
+        </div>
+        <div class="trust">
+          <span>C# e WinForms</span><span>SQL com parâmetros</span><span>PDF vetorial</span><span>Modelo em JSON</span>
+        </div>
+        <p class="status-note">Pronto para uso, com código fechado. A demonstração ao vivo é feita sob pedido.</p>
+      </div>
+    </div>
+
+    <div class="wrap">
+      <div class="screen" id="screen" aria-label="Demonstração do designer do ReportForge">
+        <div class="stage" id="stage">
+          <div class="stage-inner" id="stageInner">
+            <div class="win" id="win" data-state="designer">
+              <div class="win-title">
+                <span>ReportForge</span><span class="doc">vendas-por-cliente.rf.json</span>
+                <span class="ctl" aria-hidden="true"><i>—</i><i>▢</i><i>✕</i></span>
+              </div>
+              <div class="strip"><b>REPORTFORGE</b><span class="on" id="tabDesigner">Designer</span><span id="tabPreview">Preview</span></div>
+              <div class="ribbon" aria-hidden="true">
+                <div class="rg">
+                  <div class="items">
+                    <div class="rb on"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 6h14M12 6v12"/></svg>Text</div>
+                    <div class="rb"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="4" y="5" width="16" height="14" rx="1"/><path d="M4 10h16M4 14.5h16M10 5v14"/></svg>Table</div>
+                    <div class="rb"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 19 20 5"/></svg>Line</div>
+                    <div class="rb"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="4" y="6" width="16" height="12"/></svg>Rect.</div>
+                    <div class="rb"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="4" y="5" width="16" height="14" rx="1"/><circle cx="9" cy="10" r="2"/><path d="m4 17 5-4 4 3 3-2 4 3"/></svg>Picture</div>
+                    <div class="rb"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="5" y="5" width="14" height="14" rx="2"/><path d="m8.5 12 2.5 2.5 4.5-5"/></svg>Check</div>
+                  </div>
+                  <div class="t">COMPONENTS</div>
+                </div>
+                <div class="rg">
+                  <div class="items">
+                    <div class="rb sm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 4v16M8 7h10M8 12h6M8 17h11"/></svg></div>
+                    <div class="rb sm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 4v16M6 7h12M8 12h8M5 17h14"/></svg></div>
+                    <div class="rb sm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20 4v16M6 7h10M10 12h6M5 17h11"/></svg></div>
+                  </div>
+                  <div class="t">ALIGN</div>
+                </div>
+                <div class="rg">
+                  <div class="items"><span class="wm">CONFIDENCIAL</span></div>
+                  <div class="t">WATERMARK</div>
+                </div>
+                <div class="rg">
+                  <div class="items">
+                    <div class="rb"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 6h16v4H4zM4 14h16v4H4z"/></svg>Band</div>
+                    <div class="rb"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M7 4h7l4 4v12H7z"/><path d="M14 4v4h4"/></svg>PDF</div>
+                  </div>
+                  <div class="t">TOOLS</div>
+                </div>
+              </div>
+              <div class="body">
+                <aside class="side" aria-hidden="true">
+                  <div class="search">Search elements...</div>
+                  <div class="h">ELEMENTOS · 14</div>
+                  <ul>
+                    <li><i></i>Titulo</li>
+                    <li><i></i>Cliente</li>
+                    <li class="on"><i></i>Valor</li>
+                    <li><i></i>Status</li>
+                    <li><i></i>Total</li>
+                    <li><i></i>Rodape</li>
+                  </ul>
+                  <div class="h">PARAMETERS</div>
+                  <div class="param"><span>:inicio</span><span>01/10/2026</span><span>:fim</span><span>31/10/2026</span></div>
+                </aside>
+                <div class="canvas">
+                  <div class="ruler-x"></div><div class="ruler-y"></div>
+
+                  <!-- Designer -->
+                  <div class="view v-designer" aria-hidden="true">
+                    <div class="paper">
+                      <div class="band"><div class="bl"><span>Report title</span></div><div class="bh">Report title</div>
+                        <div class="bc" style="justify-content:space-between"><span class="el big txt">Vendas por cliente</span><span class="el">{{ShortDate}}</span></div></div>
+                      <div class="band"><div class="bl"><span>Column header</span></div><div class="bh">Column header</div>
+                        <div class="bc"><span class="el txt">Pedido</span><span class="el txt">Emissão</span><span class="el txt">Status</span><span class="el txt" style="margin-left:auto">Valor</span></div></div>
+                      <div class="band"><div class="bl"><span>Group header</span></div><div class="bh">Group header · Pedidos.Cliente</div>
+                        <div class="bc"><span class="el">{{Pedidos.Cliente}}</span></div></div>
+                      <div class="band"><div class="bl"><span>Data band</span></div><div class="bh">Data band · Pedidos</div>
+                        <div class="bc"><span class="el">{{Pedidos.Numero}}</span><span class="el">{{Pedidos.Emissao|d}}</span><span class="el">{{Pedidos.Status}}</span>
+                          <span class="el sel" style="margin-left:auto">{{Pedidos.Valor|C2}}</span>
+                          <span class="float-tb" style="right:6px;top:-24px"><span class="on">B</span><span><i>I</i></span><span><u>U</u></span></span></div></div>
+                      <div class="band"><div class="bl"><span>Summary</span></div><div class="bh">Report summary</div>
+                        <div class="bc" style="justify-content:flex-end"><span class="el txt">Total</span><span class="el">{{Sum:Pedidos.Valor|C2}}</span></div></div>
+                      <div class="band" style="border-bottom:0"><div class="bl"><span>Page footer</span></div><div class="bh">Page footer</div>
+                        <div class="bc"><span class="el">{{Sistema.Usuario}}</span><span class="el" style="margin-left:auto">{{Now}}</span></div></div>
+                    </div>
+                    <div class="minimap"><i></i><i></i><i style="width:70%"></i><i></i><i></i><i style="width:60%"></i><i></i><i></i><span class="vp"></span></div>
+                  </div>
+
+                  <!-- SQL -->
+                  <div class="view v-sql" aria-hidden="true">
+                    <div class="sqlbox">
+                      <div class="ed">
+                        <div class="ed-h"><span class="tab">Pedidos</span><span>Consulta2</span><span class="b"><span>Test DB</span><span>Detect</span><span class="go">▶ Run query</span></span></div>
+<pre><span class="k">SELECT</span> c.nome <span class="k">AS</span> cliente, p.numero, p.emissao,
+       p.status, p.valor
+  <span class="k">FROM</span> pedidos p
+  <span class="k">JOIN</span> clientes c <span class="k">ON</span> c.id = p.cliente_id
+ <span class="k">WHERE</span> p.emissao <span class="k">BETWEEN</span> <span class="p">:inicio</span> <span class="k">AND</span> <span class="p">:fim</span>
+ <span class="k">ORDER BY</span> c.nome, p.numero</pre>
+                        <div class="grid">
+                          <table>
+                            <thead><tr><th>cliente</th><th>numero</th><th>emissao</th><th>status</th><th>valor</th></tr></thead>
+                            <tbody>
+                              <tr><td>Acme Distribuidora</td><td>2451</td><td>03/10/2026</td><td>Entregue</td><td>1240.00</td></tr>
+                              <tr><td>Acme Distribuidora</td><td>2457</td><td>09/10/2026</td><td>Atrasado</td><td>860.50</td></tr>
+                              <tr><td>Acme Distribuidora</td><td>2463</td><td>15/10/2026</td><td>Entregue</td><td>2115.90</td></tr>
+                              <tr><td>Mercado Bom Preço</td><td>2452</td><td>04/10/2026</td><td>Entregue</td><td>530.00</td></tr>
+                              <tr><td>Mercado Bom Preço</td><td>2460</td><td>12/10/2026</td><td>Atrasado</td><td>1980.00</td></tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                      <div class="pp">
+                        <div class="h">PARAMETERS <span>2 detectados</span></div>
+                        <label>:inicio<span>01/10/2026</span></label>
+                        <label>:fim<span>31/10/2026</span></label>
+                        <div class="ok">✓ Conectado ao banco</div>
+                        <div style="color:var(--app-dim)">5 linhas em 38 ms</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Preview / destaque / exportar -->
+                  <div class="view v-preview" aria-hidden="true">
+                    <div class="paper">
+                      <div class="rep">
+                        <div class="rt"><b>Vendas por cliente</b><span>27/10/2026</span></div>
+                        <table>
+                          <thead><tr><th>Pedido</th><th>Emissão</th><th>Status</th><th class="n">Valor</th></tr></thead>
+                          <tbody>
+                            <tr class="g"><td colspan="4">Acme Distribuidora</td></tr>
+                            <tr><td>2451</td><td>03/10/2026</td><td class="st">Entregue</td><td class="n">R$ 1.240,00</td></tr>
+                            <tr class="late"><td>2457</td><td>09/10/2026</td><td class="st">Atrasado</td><td class="n">R$ 860,50</td></tr>
+                            <tr><td>2463</td><td>15/10/2026</td><td class="st">Entregue</td><td class="n">R$ 2.115,90</td></tr>
+                            <tr class="g"><td colspan="4">Mercado Bom Preço</td></tr>
+                            <tr><td>2452</td><td>04/10/2026</td><td class="st">Entregue</td><td class="n">R$ 530,00</td></tr>
+                            <tr class="late"><td>2460</td><td>12/10/2026</td><td class="st">Atrasado</td><td class="n">R$ 1.980,00</td></tr>
+                          </tbody>
+                        </table>
+                        <div class="sum"><span>Total</span><span>R$ 6.726,40</span></div>
+                        <div class="pf"><span>eduardo</span><span>27/10/2026 14:32:08</span></div>
+                      </div>
+                    </div>
+                    <div class="hl-card">
+                      <b>Highlight · Status</b>
+                      <code>Value == "Atrasado"</code>
+                      <div class="opts"><span class="on">Cor do texto</span><span class="on">Negrito</span><span>Preenchimento</span><span>Ocultar</span></div>
+                    </div>
+                    <div class="exp-card">
+                      <b>Exportar relatório</b>
+                      <div class="fmt"><span class="on">PDF</span><span>HTML</span><span>CSV</span></div>
+                      <div class="done">✓ vendas-por-cliente.pdf salvo</div>
+                      <div style="color:var(--app-dim)">PDF vetorial: o texto continua selecionável.</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="status"><span id="statusText">Ready</span><span>14 elements</span><span class="z">A4 (794 x 1123) · 100%</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="screen-caption" role="group" aria-label="Escolha o que a demonstração mostra">
+          <button class="state-btn" data-go="designer" aria-pressed="true">Designer</button>
+          <button class="state-btn" data-go="sql" aria-pressed="false">Consulta SQL</button>
+          <button class="state-btn" data-go="preview" aria-pressed="false">Pré-visualização</button>
+          <button class="state-btn" data-go="highlight" aria-pressed="false">Destaque condicional</button>
+          <button class="state-btn" data-go="export" aria-pressed="false">Exportar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== Benefícios rápidos ===== -->
+  <section aria-label="Por que usar">
+    <div class="wrap">
+      <div class="benefits">
+        <div class="benefit">
+          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v4H4zM4 13h10v6H4zM17 13h3v6h-3z"/></svg></span>
+          <h3>Layout sem código</h3>
+          <p>Arraste os elementos para as bandas e ajuste com réguas, alinhamento e minimapa.</p>
+        </div>
+        <div class="benefit">
+          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><ellipse cx="12" cy="6" rx="7" ry="3"/><path d="M5 6v12c0 1.7 3.1 3 7 3s7-1.3 7-3V6M5 12c0 1.7 3.1 3 7 3s7-1.3 7-3"/></svg></span>
+          <h3>Dados direto do banco</h3>
+          <p>Consultas SQL com parâmetros detectados sozinhos, testadas sem sair da tela.</p>
+        </div>
+        <div class="benefit">
+          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 4H7a2 2 0 0 0-2 2v4l-2 2 2 2v4a2 2 0 0 0 2 2h2M15 4h2a2 2 0 0 1 2 2v4l2 2-2 2v4a2 2 0 0 1-2 2h-2"/></svg></span>
+          <h3>Fórmulas e destaques</h3>
+          <p>Mais de 60 funções, totais e regras que pintam o que precisa de atenção.</p>
+        </div>
+        <div class="benefit">
+          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3h7l5 5v13H7z"/><path d="M14 3v5h5M10 14l2 2 4-4"/></svg></span>
+          <h3>PDF, HTML ou CSV</h3>
+          <p>Um modelo, três saídas. O PDF é vetorial e mantém o texto selecionável.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Recursos ===== -->
+  <section id="recursos">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Recursos</span>
+        <h2>O que um gerador de relatórios profissional faz, no seu próprio sistema.</h2>
+        <p class="lead">A interface segue o padrão de designers como o FastReport: faixa de ferramentas no topo, bandas na página e pré-visualização com um atalho.</p>
+      </div>
+
+      <div class="features">
+        <article class="feature">
+          <div class="copy">
+            <h3>Bandas para cada parte do relatório</h3>
+            <p class="lead">Título, cabeçalhos, dados, agrupamentos, resumo e rodapé. Cada banda sabe quando aparece e onde quebra a página.</p>
+            <ul>
+              <li><strong>13 tipos de banda</strong>, incluindo grupo, coluna, filha e sobreposição.</li>
+              <li><strong>Agrupamento</strong> com cabeçalho e rodapé por campo.</li>
+              <li><strong>9 componentes</strong>: texto, campo calculado, tabela, linha, retângulo, retângulo arredondado, elipse, checkbox e imagem.</li>
+            </ul>
+          </div>
+          <div class="mock" aria-hidden="true">
+            <div class="mini">
+              <div class="bandlist">
+                <div class="strong">Report title<span>1x no início</span></div>
+                <div>Page header<span>toda página</span></div>
+                <div>Column header<span>toda página</span></div>
+                <div class="strong">Group header<span>Pedidos.Cliente</span></div>
+                <div>Data header<span>antes dos dados</span></div>
+                <div class="strong">Data band<span>1x por linha</span></div>
+                <div>Data footer<span>depois dos dados</span></div>
+                <div class="strong">Group footer<span>fim do grupo</span></div>
+                <div>Column footer<span>toda página</span></div>
+                <div>Report summary<span>1x no fim</span></div>
+                <div>Page footer<span>toda página</span></div>
+                <div style="border-bottom:0">Child · Overlay<span>extras</span></div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="feature">
+          <div class="copy">
+            <h3>Consultas SQL com parâmetros</h3>
+            <p class="lead">Escreva a consulta, teste a conexão e rode sem sair do designer. Cada consulta vira uma tabela que os campos do relatório usam pelo nome.</p>
+            <ul>
+              <li><strong>Parâmetros como <code>:inicio</code></strong> são detectados no SQL e aparecem num painel para preencher.</li>
+              <li><strong>Várias consultas</strong> no mesmo relatório, como cabeçalho e itens.</li>
+              <li>Conexão com o banco configurada num arquivo <code>database.ini</code>.</li>
+            </ul>
+          </div>
+          <div class="mock" aria-hidden="true">
+            <div class="mini">
+<pre><span class="k">SELECT</span> numero, emissao, status, valor
+  <span class="k">FROM</span> pedidos
+ <span class="k">WHERE</span> cliente_id = <span class="p">:cliente</span>
+   <span class="k">AND</span> emissao <span class="k">BETWEEN</span> <span class="p">:inicio</span> <span class="k">AND</span> <span class="p">:fim</span>
+
+<span class="c">-- Parâmetros detectados: cliente, inicio, fim</span></pre>
+            </div>
+          </div>
+        </article>
+
+        <article class="feature">
+          <div class="copy">
+            <h3>Campos, totais e funções</h3>
+            <p class="lead">Qualquer texto pode misturar palavras com campos do banco. O formato vem depois da barra e os totais vêm antes dos dois pontos.</p>
+            <ul>
+              <li><code>{{Pedidos.Valor|C2}}</code> mostra o valor em reais.</li>
+              <li><code>{{Sum:Pedidos.Valor|C2}}</code> soma a coluna. Também há Count, Avg, Min e Max.</li>
+              <li><strong>67 funções</strong> de matemática, texto, datas, formatação, conversão e fluxo, como <code>IIf</code> e <code>Switch</code>.</li>
+            </ul>
+            <div class="chips"><span>FormatCurrency</span><span>FormatDateTime</span><span>IIf</span><span>Switch</span><span>Round</span><span>TitleCase</span><span>AddMonths</span><span>DateDiff</span><span>PadLeft</span><span>MonthName</span></div>
+          </div>
+          <div class="mock" aria-hidden="true">
+            <div class="mini">
+<pre><span class="c">// Texto no Report summary</span>
+Total de {{Count:Pedidos.Numero}} pedidos:
+{{Sum:Pedidos.Valor|C2}}
+
+<span class="c">// Variáveis prontas</span>
+Emitido em {{Now}} por {{Sistema.Usuario}}</pre>
+            </div>
+          </div>
+        </article>
+
+        <article class="feature">
+          <div class="copy">
+            <h3>Destaque condicional</h3>
+            <p class="lead">Defina uma regra e o ReportForge aplica o estilo só onde ela vale. Pedido atrasado em vermelho, saldo zerado escondido, total acima da meta em negrito.</p>
+            <ul>
+              <li>Regras como <code>Value == "Atrasado"</code>, com <code>!</code> para negar.</li>
+              <li>Muda <strong>cor do texto, preenchimento, estilo da fonte</strong> ou <strong>esconde</strong> o elemento.</li>
+            </ul>
+          </div>
+          <div class="mock" aria-hidden="true">
+            <div class="mini rows">
+              <div class="h"><span>Pedido</span><span>Status</span><span class="r">Valor</span></div>
+              <div><span>2451</span><span>Entregue</span><span class="r">R$ 1.240,00</span></div>
+              <div><span>2457</span><span class="hot">Atrasado</span><span class="r">R$ 860,50</span></div>
+              <div><span>2463</span><span>Entregue</span><span class="r">R$ 2.115,90</span></div>
+              <div style="border-bottom:0"><span>2460</span><span class="hot">Atrasado</span><span class="r">R$ 1.980,00</span></div>
+            </div>
+          </div>
+        </article>
+
+        <article class="feature">
+          <div class="copy">
+            <h3>Feito para quem passa o dia desenhando relatórios</h3>
+            <p class="lead">Os detalhes que fazem diferença depois do décimo relatório.</p>
+            <ul>
+              <li><strong>Réguas, alinhamento e minimapa</strong> para se achar em páginas longas.</li>
+              <li><strong>Barra flutuante</strong> com negrito, itálico e sublinhado em cima da seleção.</li>
+              <li><strong>Desfazer e refazer</strong>, copiar, colar, duplicar e ordem das camadas.</li>
+              <li><strong>Marca d'água</strong> e páginas A4, A3, Letter e Legal.</li>
+            </ul>
+          </div>
+          <div class="mock" aria-hidden="true">
+            <div class="mini tools">
+              <div><b>Minimapa</b><span>visão da página inteira</span></div>
+              <div><b>Barra flutuante</b><span>B · I · U na seleção</span></div>
+              <div><b>Ctrl+Z / Ctrl+Y</b><span>histórico de edição</span></div>
+              <div><b>Marca d'água</b><span>CONFIDENCIAL, RASCUNHO…</span></div>
+              <div><b>A4 · A3</b><span>794 x 1123 · 1123 x 1587</span></div>
+              <div><b>Letter · Legal</b><span>816 x 1056 · 816 x 1344</span></div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Para ERPs ===== -->
+  <section id="erp">
+    <div class="wrap erp">
+      <div class="copy">
+        <span class="eyebrow">Para ERPs</span>
+        <h2>O relatório desenhado roda dentro do seu sistema.</h2>
+        <p class="lead">O <code>ReportForge.Engine</code> abre o mesmo arquivo <code>.rf.json</code> salvo no designer e gera o PDF direto do seu código. O ERP pode mandar os próprios dados e variáveis, ou deixar o motor rodar o SQL do modelo.</p>
+        <div class="numbers">
+          <div class="number"><span class="big">0</span><span class="lbl">janelas abertas</span><p>O motor desenha a página sem depender do designer.</p></div>
+          <div class="number"><span class="big">1</span><span class="lbl">modelo</span><p>O mesmo JSON serve para o designer e para o ERP.</p></div>
+          <div class="number"><span class="big">3</span><span class="lbl">saídas</span><p>Arquivo PDF, bytes em memória, HTML ou CSV.</p></div>
+        </div>
+      </div>
+      <div class="code">
+        <div class="tabs" role="tablist" aria-label="Exemplos de integração">
+          <button role="tab" aria-selected="true" data-tab="0">Gerar PDF</button>
+          <button role="tab" aria-selected="false" data-tab="1">Dados do ERP</button>
+          <button role="tab" aria-selected="false" data-tab="2">Variáveis</button>
+          <button role="tab" aria-selected="false" data-tab="3">Em memória</button>
+        </div>
+        <pre id="codeView"></pre>
+        <div class="note" id="codeNote"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Arquitetura ===== -->
+  <section aria-label="Como é feito">
+    <div class="wrap two-col">
+      <div class="section-head" style="margin:0">
+        <span class="eyebrow">Por dentro</span>
+        <h2>Quatro projetos, cada um com uma função.</h2>
+        <p class="lead">A solução separa a tela do motor. Assim o ERP referencia só o que precisa para gerar relatórios, sem carregar o designer inteiro.</p>
+        <div class="chips" style="margin-top:6px"><span>C#</span><span>.NET 8 e 10</span><span>WinForms</span><span>GDI+</span><span>PdfSharpCore</span></div>
+      </div>
+      <div class="arch">
+        <div class="row r2">
+          <div class="node"><span class="nm">ReportForge</span><p>O designer em WinForms: bandas, elementos, consultas e pré-visualização.</p></div>
+          <div class="node ext"><span class="nm">Seu ERP</span><p>Chama o motor com o modelo, os dados e as variáveis do sistema.</p></div>
+        </div>
+        <div class="arrow">os dois usam</div>
+        <div class="row r1">
+          <div class="node"><span class="nm">ReportForge.Engine</span><p>Paginação, agrupamento e renderização para PDF vetorial, HTML e CSV.</p></div>
+        </div>
+        <div class="arrow">que se apoia em</div>
+        <div class="row r2">
+          <div class="node"><span class="nm">ReportForge.Core</span><p>Modelo do relatório em JSON, expressões, funções e variáveis.</p></div>
+          <div class="node"><span class="nm">ReportForge.Data</span><p>Consultas SQL, parâmetros e conexão com o banco de dados.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Atalhos ===== -->
+  <section id="atalhos">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Atalhos</span>
+        <h2>As mãos ficam no teclado.</h2>
+      </div>
+      <div class="keys">
+        <div class="key">Pré-visualizar<span class="k"><kbd>F9</kbd><kbd>Ctrl</kbd><kbd>P</kbd></span></div>
+        <div class="key">Desfazer · Refazer<span class="k"><kbd>Ctrl</kbd><kbd>Z</kbd><kbd>Ctrl</kbd><kbd>Y</kbd></span></div>
+        <div class="key">Duplicar<span class="k"><kbd>Ctrl</kbd><kbd>D</kbd></span></div>
+        <div class="key">Copiar · Colar · Recortar<span class="k"><kbd>Ctrl</kbd><kbd>C</kbd><kbd>V</kbd><kbd>X</kbd></span></div>
+        <div class="key">Negrito · Itálico · Sublinhado<span class="k"><kbd>Ctrl</kbd><kbd>B</kbd><kbd>I</kbd><kbd>U</kbd></span></div>
+        <div class="key">Trazer para frente<span class="k"><kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>↑</kbd></span></div>
+        <div class="key">Enviar para trás<span class="k"><kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>↓</kbd></span></div>
+        <div class="key">Novo · Abrir · Salvar<span class="k"><kbd>Ctrl</kbd><kbd>N</kbd><kbd>O</kbd><kbd>S</kbd></span></div>
+        <div class="key">Excluir seleção<span class="k"><kbd>Delete</kbd></span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Dúvidas ===== -->
+  <section id="perguntas">
+    <div class="wrap two-col">
+      <div class="section-head" style="margin:0">
+        <span class="eyebrow">Dúvidas</span>
+        <h2>Perguntas frequentes</h2>
+        <p class="lead">Não achou o que queria saber? Fale direto com o desenvolvedor.</p>
+      </div>
+      <div style="min-width:0">
+        <details><summary>Posso baixar o ReportForge?</summary><p>O ReportForge já está pronto para uso, mas tem código fechado e não fica disponível para download público. Para usar no seu sistema ou ver funcionando, peça uma demonstração.</p></details>
+        <details><summary>Como ele se conecta ao banco de dados?</summary><p>Pela camada ReportForge.Data, com a conexão configurada num arquivo <code>database.ini</code>. Ela é separada do designer e do motor, então mudanças no acesso ao banco não mexem no restante.</p></details>
+        <details><summary>Preciso abrir o designer para gerar um relatório?</summary><p>Não. O ReportForge.Engine gera o PDF direto do seu código, a partir do mesmo arquivo salvo no designer.</p></details>
+        <details><summary>O PDF sai igual à pré-visualização?</summary><p>O motor segue a mesma lógica de bandas, grupos e quebras de página da pré-visualização. A tabela de dados é desenhada com tamanhos fixos, então pode haver diferenças pequenas de fonte em relação à tela.</p></details>
+        <details><summary>Em que formato o relatório fica salvo?</summary><p>Num arquivo <code>.rf.json</code>. Dá para versionar no Git junto com o seu sistema.</p></details>
+        <details><summary>Em que ele roda?</summary><p>Windows, com .NET 8 ou .NET 10. O designer é um app WinForms; o motor é uma biblioteca .NET.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Chamada final ===== -->
+  <section class="cta-band" id="contato" aria-label="Contato">
+    <div class="wrap">
+      <div class="cta-box">
+        <span class="eyebrow" style="color:#9DBBFF">Demonstração</span>
+        <h2>Precisa de relatórios no seu sistema?</h2>
+        <p>Mostro o ReportForge funcionando com os seus dados e explico como integrar o motor no seu ERP.</p>
+        <span class="mail" id="mail">eduardoadaolocks@gmail.com</span>
+        <div class="cta-row">
+          <button class="btn btn-primary" type="button" id="copyMail">Copiar e-mail</button>
+          <a class="btn btn-ghost" href="https://www.linkedin.com/in/eduardoadaolocks/" target="_blank" rel="noopener">Falar no LinkedIn</a>
+        </div>
+        <div class="toast" id="toast" role="status" aria-live="polite"></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>ReportForge · designer de relatórios para Windows · por Eduardo Adão Locks</span>
+    <nav class="foot-links" aria-label="Rodapé">
+      <a href="#erp">Integração</a>
+      <a href="#perguntas">Dúvidas</a>
+      <a href="/">Portfólio</a>
+    </nav>
+    <span>Não é afiliado ao FastReport ou à Microsoft.</span>
+  </div>
+</footer>
+
+<script>
+(() => {
+  // ---------- Demonstração do designer ----------
+  const win = document.getElementById("win");
+  const buttons = [...document.querySelectorAll(".state-btn")];
+  const order = ["designer", "sql", "preview", "highlight", "export"];
+  const statusText = { designer: "Ready · Valor selecionado", sql: "Query executed · 5 rows", preview: "Preview · page 1 of 1", highlight: "Preview · 2 highlights applied", export: "Exported to PDF" };
+  const tabDesigner = document.getElementById("tabDesigner"), tabPreview = document.getElementById("tabPreview");
+  const status = document.getElementById("statusText");
+  const reduceMotion = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  let index = 0, timer = null;
+
+  function show(state) {
+    win.dataset.state = state;
+    index = order.indexOf(state);
+    buttons.forEach(b => b.setAttribute("aria-pressed", String(b.dataset.go === state)));
+    const inPreview = state === "preview" || state === "highlight" || state === "export";
+    tabDesigner.classList.toggle("on", !inPreview);
+    tabPreview.classList.toggle("on", inPreview);
+    status.textContent = statusText[state];
+  }
+  function loop() {
+    clearInterval(timer);
+    if (reduceMotion) return;
+    timer = setInterval(() => show(order[(index + 1) % order.length]), 3600);
+  }
+  buttons.forEach(b => b.addEventListener("click", () => { show(b.dataset.go); loop(); }));
+
+  // A janela tem tamanho real (960 x 560); em tela estreita ela encolhe por inteiro
+  const stage = document.getElementById("stage"), inner = document.getElementById("stageInner");
+  function fit() {
+    const s = Math.min(1, stage.clientWidth / 960);
+    inner.style.transform = `scale(${s})`;
+    stage.style.height = `${560 * s}px`;
+  }
+  addEventListener("resize", fit);
+  fit();
+  show("designer");
+  loop();
+
+  // ---------- Exemplos de integração ----------
+  const SNIPPETS = [
+    { code: `using ReportForge.Core;
+using ReportForge.Data;
+using ReportForge.Engine;
+
+var template = ReportTemplate.Load(@"C:\\Relatorios\\fatura.rf.json");
+
+// O motor roda o SQL do próprio modelo contra o database.ini
+var settings = DatabaseSettings.Load(@"C:\\Relatorios\\database.ini");
+var engine = new ReportEngine(settings);
+
+await engine.RenderToPdfFileAsync(@"C:\\temp\\fatura-2451.pdf", template);`,
+      note: "O mesmo arquivo salvo no designer, gerado direto do código do ERP." },
+    { code: `// O ERP já tem os dados em memória: nada de ir ao banco de novo
+var dataSet = new DataSet();
+dataSet.Tables.Add(minhaTabelaDeItens);      // TableName = "Itens"
+dataSet.Tables.Add(minhaTabelaDeCabecalho);  // TableName = "Cabecalho"
+
+var dadosExternos = DictionaryReportDataProvider.FromDataSet(dataSet);
+
+await engine.RenderToPdfFileAsync(@"C:\\temp\\fatura-2451.pdf", template, dadosExternos);`,
+      note: "Tabela enviada pelo ERP vence. A que não vier cai no SQL da própria consulta." },
+    { code: `// Viram {{Sistema.Empresa}}, {{Sistema.Usuario}}... em qualquer texto
+var variaveis = new Dictionary<string, object?>
+{
+    ["Empresa"] = "Acme Distribuidora Ltda",
+    ["Usuario"] = usuarioLogado.Nome,
+    ["DataEmissao"] = DateTime.Now,
+};
+
+await engine.RenderToPdfFileAsync(caminho, template, dadosExternos, variaveis);`,
+      note: "Empresa logada, usuário e número do pedido entram no relatório sem mudar o modelo." },
+    { code: `// Sem arquivo: bytes para anexar num e-mail ou devolver numa API
+byte[] pdf = await engine.RenderToPdfBytesAsync(template, dadosExternos, variaveis);
+
+// Sem banco nenhum: o ERP fornece todas as tabelas
+var engineSemBanco = new ReportEngine();`,
+      note: "Útil para e-mail, resposta HTTP ou gravar num campo BLOB." }
+  ];
+  const esc = s => s.replace(/[&<>]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;" }[c]));
+  function highlight(src) {
+    return src.split("\n").map(line => {
+      const i = line.indexOf("//");
+      let code = i >= 0 ? line.slice(0, i) : line, comment = i >= 0 ? line.slice(i) : "";
+      code = esc(code)
+        .replace(/(@?"[^"]*")/g, '<span class="s">$1</span>')
+        .replace(/\b(using|var|new|await|byte)\b/g, '<span class="k">$1</span>');
+      return code + (comment ? '<span class="c">' + esc(comment) + "</span>" : "");
+    }).join("\n");
+  }
+  const codeView = document.getElementById("codeView"), codeNote = document.getElementById("codeNote");
+  const tabs = [...document.querySelectorAll(".tabs button")];
+  function showTab(i) {
+    tabs.forEach((t, j) => t.setAttribute("aria-selected", String(i === j)));
+    codeView.innerHTML = highlight(SNIPPETS[i].code);
+    codeNote.textContent = SNIPPETS[i].note;
+  }
+  tabs.forEach((t, i) => t.addEventListener("click", () => showTab(i)));
+  showTab(0);
+
+  // ---------- Contato ----------
+  const toast = document.getElementById("toast"), mail = document.getElementById("mail");
+  document.getElementById("copyMail").addEventListener("click", async () => {
+    try {
+      await navigator.clipboard.writeText(mail.textContent);
+      toast.textContent = "E-mail copiado.";
+    } catch (e) {
+      const r = document.createRange(); r.selectNodeContents(mail);
+      const sel = getSelection(); sel.removeAllRanges(); sel.addRange(r);
+      toast.textContent = "Selecionei o e-mail: use Ctrl+C.";
+    }
+  });
+})();
+</script>
+</body>
+</html>
