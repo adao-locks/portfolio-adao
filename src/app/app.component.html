@@ -1,11 +1,21 @@
-
 <app-message></app-message>
-<router-outlet></router-outlet>
 <app-navbar></app-navbar>
-<app-home></app-home>
-<app-about></app-about>
-<app-skillstree></app-skillstree>
-<app-experiences></app-experiences>
-<app-projects></app-projects>
-<app-contact></app-contact>
-<app-social></app-social>
+
+<div class="gutter">
+  <div class="shell">
+    <app-profile></app-profile>
+
+    <main class="content">
+      <app-home></app-home>
+      <app-cases></app-cases>
+      <app-projects></app-projects>
+      <app-experiences></app-experiences>
+      <app-education></app-education>
+      <app-skillstree></app-skillstree>
+      <app-about></app-about>
+      <app-contact></app-contact>
+    </main>
+  </div>
+</div>
+
+<app-footer></app-footer>

@@ -1,34 +1,35 @@
-<section id="projetos" class="section projects-section">
-  <div class="container">
-    <div class="section-heading">
-      <span class="eyebrow">Portfólio</span>
-      <h2>Projetos em destaque</h2>
-    </div>
+<section id="projetos">
+  <div class="sh">
+    <span class="label">Projetos pessoais</span>
+    <h2>Dá para abrir e testar</h2>
+    <p>Um sistema web no ar e dois apps desktop com instalador.</p>
+  </div>
 
-    <div class="grid grid-3 projects-grid">
-      <article class="card project-card">
-        <span>Angular</span>
-        <h3>NewMoney</h3>
-        <p>Sistema web para controle financeiro.</p>
-        <a href="https://github.com/adao-locks/NewMoney" target="_blank" class="btn secondary">Ver no GitHub</a>
-        <a href="https://new-money-one.vercel.app" target="_blank" class="btn secondary">Utilizar Site</a>
+  <div class="projects">
+    @for (project of projects; track project.name) {
+      <article class="proj">
+        <div class="frame" aria-hidden="true">
+          <div class="frame-bar"><i></i><i></i><i></i><span>{{ project.address }}</span></div>
+          <div class="frame-body">{{ project.name }}</div>
+        </div>
+        <div class="proj-in">
+          <span class="kind">{{ project.kind }}</span>
+          <h3>{{ project.name }}</h3>
+          <p>{{ project.description }}</p>
+          <div class="shows"><b>Demonstra:</b> {{ project.shows }}</div>
+          <div class="tags">
+            @for (tag of project.tags; track tag) {
+              <span class="tag">{{ tag }}</span>
+            }
+          </div>
+          <div class="proj-links">
+            <a class="btn primary" [href]="project.primary.url" target="_blank" rel="noopener">{{ project.primary.label }}</a>
+            @if (project.code) {
+              <a class="btn" [href]="project.code" target="_blank" rel="noopener">Ver código</a>
+            }
+          </div>
+        </div>
       </article>
-
-      <article class="card project-card">
-        <span>Delphi</span>
-        <h3>SalesPlus</h3>
-        <p>Aplicação desktop para gestão de vendas, pedidos e estoque.</p>
-        <a href="https://github.com/adao-locks/GestaoDeVendas" target="_blank" class="btn secondary">Ver no GitHub</a>
-        <a href="https://github.com/adao-locks/GestaoDeVendas/releases/tag/Beta" target="_blank" class="btn secondary">Baixar Sistema</a>
-      </article>
-
-      <article class="card project-card">
-        <span>Angular</span>
-        <h3>CS2 Map Selector</h3>
-        <p>Ferramenta para escolha de mapas, times e chaveamento de campeonatos de E-Sports no jogo Counter-Strike 2.</p>
-        <a href="https://github.com/adao-locks/cs2-map-selector" target="_blank" class="btn secondary">Ver no GitHub</a>
-        <a href="https://cs2-map-selector.vercel.app/" target="_blank" class="btn secondary">Utilizar Site</a>
-      </article>
-    </div>
+    }
   </div>
 </section>

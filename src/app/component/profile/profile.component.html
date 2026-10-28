@@ -1,0 +1,35 @@
+<div class="id">
+  <img class="avatar" [src]="profile.avatar" alt="Foto de Eduardo Adão Locks" width="76" height="76" />
+  <div>
+    <div class="id-name">Eduardo Adão Locks</div>
+    <div class="id-role">Desenvolvedor de Software</div>
+  </div>
+  <span class="status">Aberto a oportunidades</span>
+</div>
+
+<dl class="facts">
+  <div><dt>Local</dt><dd>Indaial, SC · Brasil</dd></div>
+  <div><dt>Stack</dt><dd>C# · .NET · SQL · Delphi</dd></div>
+  <div><dt>Hoje</dt><dd>Sisplan Sistemas, desde 2024</dd></div>
+  <div><dt>Formação</dt><dd>ADS · UniSenai (2023–2026)</dd></div>
+  <div><dt>Idiomas</dt><dd>Português nativo · Inglês avançado</dd></div>
+</dl>
+
+<div class="rail-actions">
+  <a class="btn primary" [href]="profile.cv" target="_blank" rel="noopener">
+    <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M8 2v8m0 0 3-3m-3 3L5 7M3 13h10" /></svg>
+    Baixar currículo (PDF)
+  </a>
+  <button class="btn mail" type="button" (click)="copyEmail()" title="Copiar e-mail">{{ profile.email }}</button>
+  <div class="row">
+    <a class="btn" [href]="profile.linkedin" target="_blank" rel="noopener">LinkedIn</a>
+    <a class="btn" [href]="profile.github" target="_blank" rel="noopener">GitHub</a>
+    <a class="btn" [href]="profile.whatsapp" target="_blank" rel="noopener">WhatsApp</a>
+  </div>
+</div>
+
+<nav class="secnav" aria-label="Seções">
+  @for (section of sections; track section.id) {
+    <a [href]="'#' + section.id" [class.on]="active() === section.id">{{ section.label }}</a>
+  }
+</nav>

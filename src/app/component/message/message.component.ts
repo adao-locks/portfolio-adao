@@ -7,9 +7,7 @@ import { CommonModule } from '@angular/common';
     imports: [CommonModule],
     template: `
     @if (messageService.message$ | async; as message) {
-      <div
-        class="message-toast"
-        >
+      <div class="message-toast" role="status">
         {{ message }}
       </div>
     }
@@ -17,16 +15,23 @@ import { CommonModule } from '@angular/common';
     styles: [`
     .message-toast {
       position: fixed;
-      top: 6.5rem;
-      right: 1rem;
-      background: rgba(10, 13, 20, 0.92);
-      color: var(--tc);
-      padding: 1rem 1.5rem;
-      border: 1px solid var(--line);
-      border-radius: 8px;
-      box-shadow: var(--shadow);
+      left: 50%;
+      bottom: calc(24px + env(safe-area-inset-bottom, 0px));
+      transform: translateX(-50%);
       z-index: 9999;
-      transition: all 0.3s ease-in-out;
+      max-width: min(92vw, 460px);
+      padding: 12px 16px;
+      border-radius: 8px;
+      background: var(--ink);
+      color: var(--bg);
+      font-size: 0.88rem;
+      box-shadow: 0 8px 24px rgb(0 0 0 / 0.2);
+    }
+
+    @media (max-width: 980px) {
+      .message-toast {
+        bottom: calc(84px + env(safe-area-inset-bottom, 0px));
+      }
     }
   `]
 })

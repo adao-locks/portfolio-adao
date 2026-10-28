@@ -1,31 +1,59 @@
-<section id="contato" class="section contact-section">
-  <div class="container contact-grid">
-    <div class="contact-copy">
-      <span class="eyebrow">Contato</span>
-      <h2>Vamos construir algo?</h2>
-      <p>Envie uma mensagem com sua ideia, oportunidade ou projeto. Eu retorno assim que possível.</p>
+<section id="contato">
+  <div class="sh">
+    <span class="label">Contato</span>
+    <h2>Vamos conversar?</h2>
+    <p>Para vagas, mande um e-mail ou me chame no LinkedIn. Respondo em português ou inglês.</p>
+  </div>
 
-      <a href="https://wa.me/5547992006045" target="_blank" class="btn secondary" aria-label="Fale comigo no WhatsApp">
-        Chamar no WhatsApp
+  <div class="contact">
+    <div class="channels">
+      <div class="channel">
+        <span>E-mail<small class="sel">{{ profile.email }}</small></span>
+        <button class="btn" type="button" (click)="copyEmail()">Copiar</button>
+      </div>
+      <a class="channel" [href]="profile.linkedin" target="_blank" rel="noopener">
+        <span>LinkedIn<small>/in/eduardoadaolocks</small></span><span class="go">Abrir →</span>
+      </a>
+      <a class="channel" [href]="profile.whatsapp" target="_blank" rel="noopener">
+        <span>WhatsApp<small>{{ profile.whatsappLabel }}</small></span><span class="go">Conversar →</span>
+      </a>
+      <a class="channel" [href]="profile.github" target="_blank" rel="noopener">
+        <span>GitHub<small>github.com/adao-locks</small></span><span class="go">Ver repositórios →</span>
+      </a>
+      <a class="channel" [href]="profile.cv" target="_blank" rel="noopener">
+        <span>Currículo<small>PDF · versão em inglês</small></span><span class="go">Baixar →</span>
       </a>
     </div>
 
-    <form class="form" (submit)="sendEmail(); $event.preventDefault()">
-      <div class="grid grid-2">
-        <div>
+    <form class="form" novalidate (submit)="sendEmail(); $event.preventDefault()">
+      <div class="f2">
+        <div class="field" [class.bad]="submitted && nameError">
           <label for="name">Nome</label>
-          <input type="text" id="name" [(ngModel)]="name" name="name" required />
+          <input type="text" id="name" name="name" autocomplete="name" [(ngModel)]="name" />
+          <span class="err" aria-live="polite">{{ submitted ? nameError : '' }}</span>
         </div>
-        <div>
+        <div class="field" [class.bad]="submitted && emailError">
           <label for="email">E-mail</label>
-          <input type="email" id="email" [(ngModel)]="email" name="email" required />
+          <input type="email" id="email" name="email" autocomplete="email" [(ngModel)]="email" />
+          <span class="err" aria-live="polite">{{ submitted ? emailError : '' }}</span>
         </div>
       </div>
-      <div class="mt-3">
+      <div class="field" [class.bad]="submitted && messageError">
         <label for="message">Mensagem</label>
-        <textarea id="message" [(ngModel)]="message" name="message" rows="5" required></textarea>
+        <textarea id="message" name="message" rows="5" [(ngModel)]="message"></textarea>
+        <span class="err" aria-live="polite">{{ submitted ? messageError : '' }}</span>
       </div>
-      <button type="submit" class="btn mt-4">Enviar mensagem</button>
+
+      @if (status === 'sent') {
+        <div class="form-ok" role="status">Mensagem recebida. Respondo em até 1 dia útil.</div>
+      }
+      @if (status === 'failed') {
+        <div class="form-fail" role="alert">Não foi possível enviar agora. Tente de novo ou mande um e-mail para {{ profile.email }}.</div>
+      }
+
+      <button type="submit" class="btn primary" [disabled]="status === 'sending'">
+        {{ status === 'sending' ? 'Enviando…' : 'Enviar mensagem' }}
+      </button>
     </form>
   </div>
 </section>

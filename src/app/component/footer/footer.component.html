@@ -1,0 +1,13 @@
+<footer class="foot gutter">
+  <div class="foot-in">
+    <span>Eduardo Adão Locks · Indaial, SC · {{ year }}</span>
+    <a href="https://github.com/adao-locks/portfolio-adao" target="_blank" rel="noopener">Código deste portfólio</a>
+  </div>
+</footer>
+
+<!-- Barra de ações fixa, só no celular e tablet -->
+<div class="mbar gutter">
+  <a class="btn primary" [href]="profile.cv" target="_blank" rel="noopener">Currículo</a>
+  <button class="btn" type="button" (click)="copyEmail()">E-mail</button>
+  <a class="btn" [href]="profile.linkedin" target="_blank" rel="noopener">LinkedIn</a>
+</div>

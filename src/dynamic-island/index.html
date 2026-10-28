@@ -1,0 +1,521 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Dynamic Island para Windows</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="A Dynamic Island do iPhone no seu Windows: música, timers, alarmes e notificações numa pílula elegante no topo da tela. Grátis para Windows 10 e 11.">
+<link rel="icon" href="favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Instrument+Sans:wght@400..700&family=JetBrains+Mono:wght@400;600&display=swap">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#inicio"><span class="brand-pill" aria-hidden="true"></span>Dynamic Island</a>
+    <nav class="nav" aria-label="Seções">
+      <a href="#recursos">Recursos</a>
+      <a href="#comecar">Como instalar</a>
+      <a href="#perguntas">Dúvidas</a>
+      <a href="#apoiar">Apoiar</a>
+    </nav>
+    <a class="btn btn-primary btn-small download-link" href="downloads/DynamicIsland-Setup-1.0.0.exe" download>Baixar grátis</a>
+  </div>
+</header>
+
+<main id="inicio">
+  <!-- ===== Abertura ===== -->
+  <div class="hero">
+    <div class="wrap">
+      <div class="hero-text">
+        <span class="eyebrow">Grátis para Windows 10 e 11</span>
+        <h1>A Dynamic Island do iPhone chegou ao <em>Windows.</em></h1>
+        <p class="lead">Música, timers, alarmes e notificações numa pílula elegante no topo da tela. Passe o mouse, clique, e tenha tudo à mão sem abrir nenhuma janela.</p>
+        <div class="cta-row">
+          <a class="btn btn-primary download-link" href="downloads/DynamicIsland-Setup-1.0.0.exe" download>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M3 5.5 10.5 4.4v7.2H3V5.5Zm8.5-1.2L21 3v8.6h-9.5V4.3ZM3 12.4h7.5v7.2L3 18.5v-6.1Zm8.5 0H21V21l-9.5-1.3v-7.3Z"/></svg>
+            Baixar grátis para Windows
+          </a>
+          <a class="btn btn-ghost" href="#recursos">Ver o que ela faz</a>
+        </div>
+        <div class="trust">
+          <span>100% grátis</span><span>Sem anúncios</span><span>Sem cadastro</span><span>Instala em 1 minuto</span>
+        </div>
+        <p class="preview-note" hidden id="previewNote">Esta é uma pré-visualização. O download funciona quando o site é publicado junto com o instalador.</p>
+      </div>
+    </div>
+
+    <div class="wrap">
+      <div class="screen" id="screen" aria-label="Demonstração da ilha no topo de uma área de trabalho">
+        <div class="island-stage" id="stage">
+          <div class="island" id="island" data-state="music">
+            <div class="layer l-compact">
+              <span class="ico-yt" aria-hidden="true"></span>
+              <span class="t">Lo-fi para estudar e relaxar</span>
+              <span class="eq" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+              <span class="ctrls" aria-hidden="true">
+                <span><svg viewBox="0 0 24 24"><path d="M19.5 7 12.5 12l7 5Zm-8 0L4.5 12l7 5Z"/></svg></span>
+                <span><svg viewBox="0 0 24 24"><path d="M7 5.5h3v13H7Zm7 0h3v13h-3Z"/></svg></span>
+                <span><svg viewBox="0 0 24 24"><path d="M4.5 7 11.5 12l-7 5Zm8 0 7 5-7 5Z"/></svg></span>
+              </span>
+              <span class="chip"><span class="ring" aria-hidden="true"></span>04:59</span>
+            </div>
+            <div class="layer l-notify">
+              <span class="app-ico" style="background:#0A84FF">M</span>
+              <span class="txt">
+                <span class="meta">Mensagens · agora</span>
+                <span class="ttl">Ana</span>
+                <span class="body">Bora almoçar às 12h? Reservei uma mesa pra gente.</span>
+              </span>
+            </div>
+            <div class="layer l-alarm">
+              <span class="pulse" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="13" r="7"/><path d="M12 9.5V13l2.2 1.6M5 4.5 3 6.5m16-2 2 2"/></svg></span>
+              <span class="txt"><span class="ttl">Alarme</span><br><span class="sub">07:00</span></span>
+              <span class="pill-btn">Soneca 5 min</span>
+              <span class="pill-btn hot">Parar</span>
+            </div>
+            <div class="layer l-expanded">
+              <div class="exp-main">
+                <div>
+                  <div class="clock">09:41</div>
+                  <div class="date">Sábado, 17 de outubro</div>
+                  <div class="cal" aria-hidden="true">
+                    <b>D</b><b>S</b><b>T</b><b>Q</b><b>Q</b><b>S</b><b>S</b>
+                    <span class="o">27</span><span class="o">28</span><span class="o">29</span><span class="o">30</span><span>1</span><span>2</span><span>3</span>
+                    <span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>10</span>
+                    <span>11</span><span>12</span><span>13</span><span>14</span><span>15</span><span>16</span><span class="today">17</span>
+                    <span>18</span><span>19</span><span>20</span><span>21</span><span>22</span><span>23</span><span>24</span>
+                    <span>25</span><span>26</span><span>27</span><span>28</span><span>29</span><span>30</span><span>31</span>
+                    <span class="o">1</span><span class="o">2</span><span class="o">3</span><span class="o">4</span><span class="o">5</span><span class="o">6</span><span class="o">7</span>
+                  </div>
+                </div>
+                <div class="divider"></div>
+                <div class="player">
+                  <div class="player-top">
+                    <div class="cover"></div>
+                    <div>
+                      <div class="src"><span class="ico-yt"></span>YouTube · Chrome</div>
+                      <div class="song">Lo-fi para estudar e relaxar</div>
+                      <div class="artist">Chill Beats</div>
+                    </div>
+                  </div>
+                  <div class="progress"><span>12:08</span><span class="bar"></span><span>31:40</span></div>
+                  <div class="big-ctrls" aria-hidden="true">
+                    <svg width="20" height="20" viewBox="0 0 24 24"><path d="M19.5 7 12.5 12l7 5Zm-8 0L4.5 12l7 5Z"/></svg>
+                    <svg width="26" height="26" viewBox="0 0 24 24"><path d="M7 5.5h3v13H7Zm7 0h3v13h-3Z"/></svg>
+                    <svg width="20" height="20" viewBox="0 0 24 24"><path d="M4.5 7 11.5 12l-7 5Zm8 0 7 5-7 5Z"/></svg>
+                  </div>
+                </div>
+              </div>
+              <div class="tiles" aria-hidden="true">
+                <div class="tile"><svg width="18" height="18" viewBox="0 0 24 24" fill="#fff"><path d="M3.5 9.5H7l4.5-4v13L7 14.5H3.5Z"/><path d="M15 9.5a3.5 3.5 0 0 1 0 5M17.5 7a7 7 0 0 1 0 10" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round"/></svg><span class="vol"></span><span class="v">64%</span></div>
+                <div class="tile"><svg width="22" height="22" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4.6" fill="#FFD60A"/><path d="M12 2.5v2.4M12 19.1v2.4M2.5 12h2.4M19.1 12h2.4M5.3 5.3l1.7 1.7M17 17l1.7 1.7M5.3 18.7 7 17M17 7l1.7-1.7" stroke="#FFD60A" stroke-width="1.9" stroke-linecap="round"/></svg><div><div class="k">22° Céu limpo</div><div class="v">São Paulo · 25°/16°</div></div></div>
+                <div class="tile"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0A84FF" stroke-width="2" stroke-linecap="round"><path d="M8.6 15.4a4.8 4.8 0 0 1 6.8 0M5.6 12.4a9 9 0 0 1 12.8 0M2.6 9.4a13.3 13.3 0 0 1 18.8 0"/><circle cx="12" cy="18.6" r="1.7" fill="#0A84FF" stroke="none"/></svg><div><div class="k">Casa 5G</div><div class="v">Conectado</div></div></div>
+                <div class="tile bell"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8"><path d="M6 16.5V11a6 6 0 0 1 12 0v5.5l1.5 1.5h-15Z"/><path d="M10 20.5a2.2 2.2 0 0 0 4 0"/></svg><span class="badge">2</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="screen-caption" role="group" aria-label="Escolha o que a ilha mostra">
+          <button class="state-btn" data-go="music" aria-pressed="true">Música</button>
+          <button class="state-btn" data-go="timer" aria-pressed="false">Timer</button>
+          <button class="state-btn" data-go="notify" aria-pressed="false">Notificação</button>
+          <button class="state-btn" data-go="alarm" aria-pressed="false">Alarme</button>
+          <button class="state-btn" data-go="expanded" aria-pressed="false">Painel aberto</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== Benefícios rápidos ===== -->
+  <section aria-label="Por que usar">
+    <div class="wrap">
+      <div class="benefits">
+        <div class="benefit">
+          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V6l11-2v12"/><circle cx="6.5" cy="18" r="2.5"/><circle cx="17.5" cy="16" r="2.5"/></svg></span>
+          <h3>Música sem trocar de janela</h3>
+          <p>Pause, pule e volte a faixa de qualquer lugar, enquanto trabalha ou joga.</p>
+        </div>
+        <div class="benefit">
+          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2M9 2.5h6"/></svg></span>
+          <h3>O tempo sempre à vista</h3>
+          <p>Timer, alarme e Pomodoro contando ali no topo, sem você precisar procurar.</p>
+        </div>
+        <div class="benefit">
+          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 16.5V11a6 6 0 0 1 12 0v5.5l1.5 1.5h-15Z"/><path d="M10 20.5a2.2 2.2 0 0 0 4 0"/></svg></span>
+          <h3>Notificações com classe</h3>
+          <p>Aparecem suaves no topo, somem sozinhas e abrem o app com um clique.</p>
+        </div>
+        <div class="benefit">
+          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8Z"/></svg></span>
+          <h3>Leve e discreta</h3>
+          <p>Fica quietinha quando você não precisa dela e não pesa no seu PC.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Recursos ===== -->
+  <section id="recursos">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Recursos</span>
+        <h2>Tudo o que você olharia no celular, bem onde seus olhos já estão.</h2>
+        <p class="lead">Fechada, ela ocupa menos espaço que a barra de uma janela. Aberta, vira uma central com tudo o que você usa no dia a dia.</p>
+      </div>
+
+      <div class="features">
+        <article class="feature">
+          <div class="copy">
+            <h3>Sua música, sempre à mão</h3>
+            <p class="lead">Spotify, YouTube, Netflix e o que mais estiver tocando aparecem na ilha, com o ícone certo e a capa da música.</p>
+            <ul>
+              <li><strong>Pause, avance ou volte</strong> sem abrir o player.</li>
+              <li><strong>Reconhece o site</strong> que está tocando no navegador.</li>
+              <li>Barra de progresso e capa quando você abre a ilha.</li>
+            </ul>
+            <div class="site-icons" aria-label="Funciona com">
+              <span>Spotify</span><span>YouTube</span><span>YouTube Music</span><span>Netflix</span><span>Twitch</span><span>Prime Video</span><span>Disney+</span><span>Deezer</span><span>SoundCloud</span><span>Globoplay</span><span>Crunchyroll</span><span>Max</span><span>e muito mais</span>
+            </div>
+          </div>
+          <div class="mock" aria-hidden="true">
+            <div class="island mini" data-state="music" style="--w:330px">
+              <div class="layer l-compact" style="opacity:1;position:relative;left:0;translate:none">
+                <span class="ico-yt"></span><span class="t">Lo-fi para estudar e relaxar</span>
+                <span class="eq"><i></i><i></i><i></i><i></i></span>
+                <span class="ctrls"><span><svg viewBox="0 0 24 24"><path d="M19.5 7 12.5 12l7 5Zm-8 0L4.5 12l7 5Z"/></svg></span><span><svg viewBox="0 0 24 24"><path d="M7 5.5h3v13H7Zm7 0h3v13h-3Z"/></svg></span><span><svg viewBox="0 0 24 24"><path d="M4.5 7 11.5 12l-7 5Zm8 0 7 5-7 5Z"/></svg></span></span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="feature">
+          <div class="copy">
+            <h3>Nunca mais perca a hora</h3>
+            <p class="lead">Alarme, timer, cronômetro e Pomodoro num lugar só. Enquanto conta, o tempo fica na pílula; quando acaba, a ilha avisa com som.</p>
+            <ul>
+              <li><strong>Timer em um clique</strong>: 1, 5, 10, 15 ou 30 minutos.</li>
+              <li><strong>Pomodoro</strong> pra manter o foco: 25 minutos de trabalho, 5 de pausa.</li>
+              <li><strong>Alarmes</strong> diários ou de uma vez só, com soneca.</li>
+            </ul>
+          </div>
+          <div class="mock" aria-hidden="true">
+            <div class="island mini" data-state="timer" style="--w:434px">
+              <div class="layer l-compact" style="opacity:1;position:relative;left:0;translate:none">
+                <span class="ico-yt"></span><span class="t">Lo-fi para estudar e relaxar</span>
+                <span class="eq"><i></i><i></i><i></i><i></i></span>
+                <span class="ctrls"><span><svg viewBox="0 0 24 24"><path d="M19.5 7 12.5 12l7 5Zm-8 0L4.5 12l7 5Z"/></svg></span><span><svg viewBox="0 0 24 24"><path d="M7 5.5h3v13H7Zm7 0h3v13h-3Z"/></svg></span><span><svg viewBox="0 0 24 24"><path d="M4.5 7 11.5 12l-7 5Zm8 0 7 5-7 5Z"/></svg></span></span>
+                <span class="chip"><span class="ring"></span>04:59</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="feature">
+          <div class="copy">
+            <h3>Notificações que não atrapalham</h3>
+            <p class="lead">Mensagens, lembretes e avisos chegam deslizando no topo da tela e saem de cena sozinhos. Nada de caixinha cobrindo o canto da tela.</p>
+            <ul>
+              <li><strong>Um clique</strong> abre o app que mandou.</li>
+              <li>Perdeu alguma? Estão todas guardadas no <strong>sininho</strong>.</li>
+            </ul>
+          </div>
+          <div class="mock" aria-hidden="true">
+            <div class="island mini" style="--w:460px;--h:78px;--r:39px">
+              <div class="layer l-notify" style="opacity:1;position:relative;left:0;translate:none">
+                <span class="app-ico" style="background:#30D158">C</span>
+                <span class="txt"><span class="meta">Calendário · agora</span><span class="ttl">Reunião em 10 minutos</span><span class="body">Planejamento da semana · Sala 3</span></span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="feature">
+          <div class="copy">
+            <h3>Tudo num clique</h3>
+            <p class="lead">Clique na pílula e ela se abre numa central bonita, com as coisas que você mais confere durante o dia.</p>
+            <ul>
+              <li><strong>Hora e calendário</strong> do mês.</li>
+              <li><strong>Clima</strong> da sua cidade.</li>
+              <li><strong>Volume e Wi-Fi</strong> sem procurar na barra de tarefas.</li>
+            </ul>
+          </div>
+          <div class="mock" aria-hidden="true">
+            <div class="mock-scale" style="width:620px;height:300px;flex:none" data-fit>
+              <div class="island" data-state="expanded" style="--w:620px;--h:300px;--r:40px">
+                <div class="layer l-expanded" style="opacity:1">
+                  <div class="exp-main">
+                    <div>
+                      <div class="clock">09:41</div>
+                      <div class="date">Sábado, 17 de outubro</div>
+                      <div class="cal">
+                        <b>D</b><b>S</b><b>T</b><b>Q</b><b>Q</b><b>S</b><b>S</b>
+                        <span class="o">27</span><span class="o">28</span><span class="o">29</span><span class="o">30</span><span>1</span><span>2</span><span>3</span>
+                        <span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>10</span>
+                        <span>11</span><span>12</span><span>13</span><span>14</span><span>15</span><span>16</span><span class="today">17</span>
+                        <span>18</span><span>19</span><span>20</span><span>21</span><span>22</span><span>23</span><span>24</span>
+                        <span>25</span><span>26</span><span>27</span><span>28</span><span>29</span><span>30</span><span>31</span>
+                        <span class="o">1</span><span class="o">2</span><span class="o">3</span><span class="o">4</span><span class="o">5</span><span class="o">6</span><span class="o">7</span>
+                      </div>
+                    </div>
+                    <div class="divider"></div>
+                    <div class="player">
+                      <div class="player-top">
+                        <div class="cover"></div>
+                        <div><div class="src"><span class="ico-yt"></span>YouTube · Chrome</div><div class="song">Lo-fi para estudar e relaxar</div><div class="artist">Chill Beats</div></div>
+                      </div>
+                      <div class="progress"><span>12:08</span><span class="bar"></span><span>31:40</span></div>
+                      <div class="big-ctrls">
+                        <svg width="20" height="20" viewBox="0 0 24 24"><path d="M19.5 7 12.5 12l7 5Zm-8 0L4.5 12l7 5Z"/></svg>
+                        <svg width="26" height="26" viewBox="0 0 24 24"><path d="M7 5.5h3v13H7Zm7 0h3v13h-3Z"/></svg>
+                        <svg width="20" height="20" viewBox="0 0 24 24"><path d="M4.5 7 11.5 12l-7 5Zm8 0 7 5-7 5Z"/></svg>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tiles">
+                    <div class="tile"><svg width="18" height="18" viewBox="0 0 24 24" fill="#fff"><path d="M3.5 9.5H7l4.5-4v13L7 14.5H3.5Z"/><path d="M15 9.5a3.5 3.5 0 0 1 0 5M17.5 7a7 7 0 0 1 0 10" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round"/></svg><span class="vol"></span><span class="v">64%</span></div>
+                    <div class="tile"><svg width="22" height="22" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4.6" fill="#FFD60A"/><path d="M12 2.5v2.4M12 19.1v2.4M2.5 12h2.4M19.1 12h2.4M5.3 5.3l1.7 1.7M17 17l1.7 1.7M5.3 18.7 7 17M17 7l1.7-1.7" stroke="#FFD60A" stroke-width="1.9" stroke-linecap="round"/></svg><div><div class="k">22° Céu limpo</div><div class="v">São Paulo · 25°/16°</div></div></div>
+                    <div class="tile"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0A84FF" stroke-width="2" stroke-linecap="round"><path d="M8.6 15.4a4.8 4.8 0 0 1 6.8 0M5.6 12.4a9 9 0 0 1 12.8 0M2.6 9.4a13.3 13.3 0 0 1 18.8 0"/><circle cx="12" cy="18.6" r="1.7" fill="#0A84FF" stroke="none"/></svg><div><div class="k">Casa 5G</div><div class="v">Conectado</div></div></div>
+                    <div class="tile bell"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8"><path d="M6 16.5V11a6 6 0 0 1 12 0v5.5l1.5 1.5h-15Z"/><path d="M10 20.5a2.2 2.2 0 0 0 4 0"/></svg><span class="badge">2</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="feature">
+          <div class="copy">
+            <h3>Do seu jeito</h3>
+            <p class="lead">Escura, clara ou acompanhando o Windows. Com efeito de vidro na transparência que você preferir. E, se quiser, ela já abre sozinha quando você liga o PC.</p>
+          </div>
+          <div class="mock" aria-hidden="true" style="gap:14px;grid-auto-flow:row">
+            <div class="island mini" style="--w:176px">
+              <div class="layer l-compact" style="opacity:1;position:relative;left:0;translate:none;justify-content:center;gap:12px;padding:0">
+                <span style="font-size:13px;font-weight:700">09:41</span>
+                <span style="display:flex;align-items:center;gap:5px;font-size:13px;font-weight:700;color:rgba(245,245,247,.8)"><svg width="16" height="16" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4.6" fill="#FFD60A"/><path d="M12 2.5v2.4M12 19.1v2.4M2.5 12h2.4M19.1 12h2.4M5.3 5.3l1.7 1.7M17 17l1.7 1.7M5.3 18.7 7 17M17 7l1.7-1.7" stroke="#FFD60A" stroke-width="1.9" stroke-linecap="round"/></svg>22°</span>
+              </div>
+            </div>
+            <div class="island mini" style="--w:176px;background:#F4F4F7;color:#1C1C1E;box-shadow:inset 0 1px 0 #fff,0 0 0 1px rgba(0,0,0,.12),0 18px 50px rgba(0,0,0,.25)">
+              <div class="layer l-compact" style="opacity:1;position:relative;left:0;translate:none;justify-content:center;gap:12px;padding:0">
+                <span style="font-size:13px;font-weight:700">09:41</span>
+                <span style="display:flex;align-items:center;gap:5px;font-size:13px;font-weight:700;color:#3C3C43"><svg width="16" height="16" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4.6" fill="#FFB800"/><path d="M12 2.5v2.4M12 19.1v2.4M2.5 12h2.4M19.1 12h2.4M5.3 5.3l1.7 1.7M17 17l1.7 1.7M5.3 18.7 7 17M17 7l1.7-1.7" stroke="#FFB800" stroke-width="1.9" stroke-linecap="round"/></svg>22°</span>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Leveza em números ===== -->
+  <section aria-label="Leve de verdade">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Leve de verdade</span>
+        <h2>Bonita por fora, leve por dentro.</h2>
+      </div>
+      <div class="numbers">
+        <div class="number"><span class="big">1 min</span><span class="lbl">pra instalar</span><p>Baixou, instalou, pronto. Não precisa de mais nenhum programa.</p></div>
+        <div class="number"><span class="big">60 MB</span><span class="lbl">de memória</span><p>Mais ou menos o que uma única aba de navegador costuma usar.</p></div>
+        <div class="number"><span class="big">R$ 0</span><span class="lbl">pra sempre</span><p>Sem anúncios, sem cadastro e sem versão “premium”.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Como começar ===== -->
+  <section id="comecar">
+    <div class="wrap two-col">
+      <div class="section-head" style="margin:0">
+        <span class="eyebrow">Como instalar</span>
+        <h2>Comece em três passos.</h2>
+        <p class="lead">Funciona em qualquer PC com Windows 10 ou 11 (64 bits). Não pede senha de administrador.</p>
+        <div class="cta-row" style="margin-top:8px">
+          <a class="btn btn-primary download-link" href="downloads/DynamicIsland-Setup-1.0.0.exe" download>Baixar grátis</a>
+        </div>
+      </div>
+      <ol class="steps">
+        <li><div><h3>Baixe o instalador</h3><p>É um arquivo só, de 48 MB.</p></div></li>
+        <li><div><h3>Abra e avance</h3><p>Deixe marcado “Iniciar junto com o Windows” se quiser que ela já apareça sempre. Se o Windows mostrar um aviso de segurança, clique em <strong>Mais informações</strong> e depois em <strong>Executar assim mesmo</strong>.</p></div></li>
+        <li><div><h3>Pronto</h3><p>A ilha aparece no topo da tela. Passe o mouse, clique e explore.</p></div></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ===== Dúvidas ===== -->
+  <section id="perguntas">
+    <div class="wrap two-col">
+      <div class="section-head" style="margin:0">
+        <span class="eyebrow">Dúvidas</span>
+        <h2>Perguntas frequentes</h2>
+        <p class="lead">Quer saber como tudo funciona por dentro? Veja os <a href="docs.html">detalhes técnicos</a>.</p>
+      </div>
+      <div style="display:grid;gap:4px;align-content:start;min-width:0">
+        <details><summary>É grátis mesmo?</summary><p>Sim, e vai continuar assim. Sem anúncios, sem cadastro e sem limite de uso. Se quiser ajudar o projeto, tem a opção de doar por Pix aqui embaixo.</p></details>
+        <details><summary>É seguro?</summary><p>Sim. O Dynamic Island não pede senha de administrador, não mostra propaganda, não cria conta e não envia seus dados para lugar nenhum. A única coisa que ele busca na internet é a previsão do tempo da cidade que você escolher.</p></details>
+        <details><summary>Por que o Windows mostra um aviso ao instalar?</summary><p>O Windows avisa quando o instalador ainda não tem uma assinatura digital, que é paga. É só clicar em “Mais informações” e “Executar assim mesmo”. As doações ajudam justamente a pagar essa assinatura.</p></details>
+        <details><summary>Vai deixar meu PC lento?</summary><p>Não. Ela usa por volta de 60 MB de memória e quase nada de processador quando está parada.</p></details>
+        <details><summary>Funciona com o Spotify e o YouTube?</summary><p>Sim, e também com Netflix, Twitch, Prime Video, Deezer e praticamente qualquer coisa que toque som no Windows.</p></details>
+        <details><summary>Atrapalha nos jogos?</summary><p>Ela fica discreta no topo e quase não usa recursos. Se preferir, esconda com um clique pelo ícone perto do relógio do Windows.</p></details>
+        <details><summary>Como desinstalo?</summary><p>Como qualquer programa: Configurações do Windows → Aplicativos → Dynamic Island → Desinstalar.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Pix ===== -->
+  <section id="apoiar">
+    <div class="wrap pix">
+      <div class="section-head" style="margin:0">
+        <span class="eyebrow">Apoie o projeto</span>
+        <h2>Curtiu? Pague um café pro desenvolvedor.</h2>
+        <p class="lead">O Dynamic Island é feito com carinho e vai continuar gratuito. Um Pix de qualquer valor ajuda a trazer novidades e a tirar aquele aviso do Windows na instalação.</p>
+        <ol class="steps" style="margin-top:12px">
+          <li><div><h3>Abra o app do seu banco</h3><p>Vá em Pix e escolha pagar com QR Code ou “copia e cola”.</p></div></li>
+          <li><div><h3>Escaneie ou cole o código</h3><p>Use o QR Code ao lado, ou copie o código com um clique.</p></div></li>
+          <li><div><h3>Escolha o valor</h3><p>Qualquer valor faz diferença. Obrigado!</p></div></li>
+        </ol>
+      </div>
+      <div class="pix-card">
+        <div class="qr" id="qr" role="img" aria-label="QR Code Pix para doação"><span class="qr-fallback">Carregando QR Code…</span></div>
+        <div class="key-box">
+          <span class="k">Chave Pix</span>
+          <span class="key" id="pixKey">e35125d4-97fa-4f95-bc27-178b339fb9ea</span>
+        </div>
+        <div class="copy-row">
+          <button class="btn btn-primary" type="button" id="copyCode">Copiar Pix copia e cola</button>
+          <button class="btn btn-ghost" type="button" id="copyKey">Copiar chave</button>
+        </div>
+        <div class="toast" id="toast" role="status" aria-live="polite"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Chamada final ===== -->
+  <section class="cta-band" aria-label="Baixar">
+    <div class="wrap">
+      <div class="cta-box">
+        <span class="pill-demo" aria-hidden="true">09:41 <span style="color:#FFD60A">☀</span> 22°</span>
+        <h2>Dê ao seu Windows o detalhe que faltava.</h2>
+        <p>Grátis, leve e pronto em um minuto.</p>
+        <a class="btn btn-primary download-link" href="downloads/DynamicIsland-Setup-1.0.0.exe" download>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M3 5.5 10.5 4.4v7.2H3V5.5Zm8.5-1.2L21 3v8.6h-9.5V4.3ZM3 12.4h7.5v7.2L3 18.5v-6.1Zm8.5 0H21V21l-9.5-1.3v-7.3Z"/></svg>
+          Baixar grátis para Windows
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>Dynamic Island para Windows · versão 1.0.0 · Windows 10 e 11</span>
+    <nav class="foot-links" aria-label="Rodapé">
+      <a href="docs.html">Detalhes técnicos</a>
+      <a href="docs.html#privacidade">Privacidade</a>
+      <a href="#apoiar">Apoiar</a>
+    </nav>
+    <span>Não é afiliado à Apple, Microsoft ou aos serviços citados.</span>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcode-generator/1.4.4/qrcode.min.js"></script>
+<script>
+(() => {
+  // ---------- Pix (BR Code estático, padrão do Banco Central, com CRC16 já calculado) ----------
+  const PIX_KEY = "e35125d4-97fa-4f95-bc27-178b339fb9ea";
+  const PIX_CODE = "00020101021126580014br.gov.bcb.pix0136e35125d4-97fa-4f95-bc27-178b339fb9ea5204000053039865802BR5914DYNAMIC ISLAND6006BRASIL62070503***63046F15";
+
+  const qrBox = document.getElementById("qr");
+  try {
+    const qr = qrcode(0, "M");
+    qr.addData(PIX_CODE);
+    qr.make();
+    qrBox.innerHTML = qr.createSvgTag({ cellSize: 6, margin: 0, scalable: true });
+  } catch (e) {
+    qrBox.innerHTML = '<span class="qr-fallback">Não deu para gerar o QR Code aqui. Use o “copia e cola” ou a chave abaixo.</span>';
+  }
+
+  const toast = document.getElementById("toast");
+  let toastTimer;
+  function say(text) {
+    toast.textContent = text;
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => (toast.textContent = ""), 3500);
+  }
+  function selectText(el) {
+    const range = document.createRange();
+    range.selectNodeContents(el);
+    const sel = window.getSelection();
+    sel.removeAllRanges();
+    sel.addRange(range);
+  }
+  async function copy(text, label, fallbackEl) {
+    try {
+      await navigator.clipboard.writeText(text);
+      say(label + " copiado. Agora é só colar no app do banco.");
+    } catch (e) {
+      if (fallbackEl) selectText(fallbackEl);
+      say("Não consegui copiar sozinho: selecionei o texto, use Ctrl+C.");
+    }
+  }
+  const keyEl = document.getElementById("pixKey");
+  document.getElementById("copyKey").addEventListener("click", () => { keyEl.textContent = PIX_KEY; copy(PIX_KEY, "Chave Pix", keyEl); });
+  document.getElementById("copyCode").addEventListener("click", () => {
+    keyEl.textContent = PIX_CODE; // mostra o código se precisar copiar à mão
+    copy(PIX_CODE, "Pix copia e cola", keyEl);
+  });
+
+  // ---------- Demonstração da ilha ----------
+  const island = document.getElementById("island");
+  const stage = document.getElementById("stage");
+  const screen = document.getElementById("screen");
+  const buttons = [...document.querySelectorAll(".state-btn")];
+  const order = ["music", "timer", "notify", "alarm", "expanded"];
+  const reduceMotion = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  let index = 0, timer = null;
+
+  function show(state) {
+    island.dataset.state = state;
+    index = order.indexOf(state);
+    buttons.forEach(b => b.setAttribute("aria-pressed", String(b.dataset.go === state)));
+  }
+  function loop() {
+    clearInterval(timer);
+    if (reduceMotion) return;
+    timer = setInterval(() => show(order[(index + 1) % order.length]), 3200);
+  }
+  buttons.forEach(b => b.addEventListener("click", () => { show(b.dataset.go); loop(); }));
+
+  // A maquete tem o tamanho real da ilha (620 px aberta); em tela estreita ela encolhe por inteiro
+  function fit() {
+    stage.style.setProperty("--s", Math.min(1, (screen.clientWidth - 24) / 640).toFixed(3));
+    document.querySelectorAll("[data-fit]").forEach(el => {
+      const box = el.parentElement.clientWidth - 32;
+      const s = Math.min(1, box / 620);
+      el.style.transform = `scale(${s})`;
+      el.style.margin = `${-(300 * (1 - s)) / 2}px ${-(620 * (1 - s)) / 2}px`;
+    });
+    // Pílulas das miniaturas: em celular encolhem junto (zoom muda o tamanho de verdade, sem alargar a página)
+    document.querySelectorAll(".mock > .island.mini").forEach(el => {
+      el.style.zoom = 1;
+      const s = Math.min(1, (el.parentElement.clientWidth - 32) / el.offsetWidth);
+      el.style.zoom = s.toFixed(3);
+    });
+  }
+  addEventListener("resize", fit);
+  fit();
+  loop();
+
+  // Pré-visualização (sem o instalador ao lado): o botão leva pra seção de instalação
+  if (document.documentElement.dataset.preview === "1") {
+    document.getElementById("previewNote").hidden = false;
+    document.querySelectorAll(".download-link").forEach(a => { a.removeAttribute("download"); a.href = "#comecar"; });
+  }
+})();
+</script>
+</body>
+</html>

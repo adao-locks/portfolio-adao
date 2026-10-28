@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Dynamic Island · Detalhes técnicos</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Requisitos, instalação, privacidade, funcionamento interno e limitações do Dynamic Island para Windows.">
+<link rel="icon" href="favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Instrument+Sans:wght@400..700&family=JetBrains+Mono:wght@400;600&display=swap">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="index.html"><span class="brand-pill" aria-hidden="true"></span>Dynamic Island</a>
+    <nav class="nav" aria-label="Seções">
+      <a href="#requisitos">Requisitos</a>
+      <a href="#instalacao">Instalação</a>
+      <a href="#como-usar">Como usar</a>
+      <a href="#privacidade">Privacidade</a>
+      <a href="#por-dentro">Por dentro</a>
+    </nav>
+    <a class="btn btn-primary btn-small download-link" href="downloads/DynamicIsland-Setup-1.0.0.exe" download>Baixar grátis</a>
+  </div>
+</header>
+
+<main>
+  <div class="wrap docs-hero">
+    <a class="back-link" href="index.html">← Voltar para o início</a>
+    <span class="eyebrow">Detalhes técnicos</span>
+    <h1>Como o Dynamic Island funciona</h1>
+    <p class="lead">Requisitos, instalação passo a passo, o que o app lê no seu PC, como ele é feito e o que o Windows não deixa fazer.</p>
+    <nav class="toc" aria-label="Nesta página">
+      <a href="#requisitos">Requisitos</a>
+      <a href="#instalacao">Instalação</a>
+      <a href="#como-usar">Como usar</a>
+      <a href="#privacidade">Privacidade</a>
+      <a href="#por-dentro">Por dentro</a>
+      <a href="#limitacoes">Limitações</a>
+      <a href="#notificacoes">Notificações</a>
+    </nav>
+  </div>
+
+  <!-- ===== Requisitos ===== -->
+  <section id="requisitos">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Requisitos</span>
+        <h2>Onde roda</h2>
+      </div>
+      <div class="specs">
+        <div class="spec"><span class="k">Sistema</span><span class="v">Windows 10 (2004+) ou 11</span><p>Versão 64 bits (x64). Build mínimo 19041.</p></div>
+        <div class="spec"><span class="k">Download</span><span class="v">48 MB</span><p>O .NET vai junto no instalador: não precisa instalar mais nada.</p></div>
+        <div class="spec"><span class="k">Instalado</span><span class="v">~165 MB</span><p>Na pasta de programas do seu usuário, sem afetar as outras contas do PC.</p></div>
+        <div class="spec"><span class="k">Memória</span><span class="v">~60 MB</span><p>Uso típico de RAM com música tocando.</p></div>
+        <div class="spec"><span class="k">Processador</span><span class="v">2–4% de um núcleo</span><p>Com música e o equalizador animando. Parada, fica perto de zero.</p></div>
+        <div class="spec"><span class="k">Permissões</span><span class="v">Sem administrador</span><p>Instala e roda com o seu usuário comum.</p></div>
+      </div>
+      <div class="two-col" style="margin-top:40px">
+        <div class="callout">
+          <strong>Onde ficam os arquivos</strong>
+          <p>O app fica em <code>%LOCALAPPDATA%\Programs\Dynamic Island</code>. Cidade do clima, alarmes, tema e o resto ficam em <code>%APPDATA%\DynamicIsland\settings.json</code>. Desinstalar mantém as configurações, então reinstalar volta do jeito que estava.</p>
+        </div>
+        <div class="callout">
+          <strong>Telas e escala</strong>
+          <p>A ilha aparece no topo da tela principal e respeita a escala do Windows (100%, 125%, 150%…). Em jogos e vídeos em tela cheia ela continua por cima.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Instalação ===== -->
+  <section id="instalacao">
+    <div class="wrap two-col">
+      <div class="section-head" style="margin:0">
+        <span class="eyebrow">Instalação</span>
+        <h2>Passo a passo</h2>
+        <p class="lead">O instalador está em português (troca para inglês se o Windows estiver em inglês) e instala só para o seu usuário.</p>
+        <p class="cta-meta">DynamicIsland-Setup-1.0.0.exe · 48 MB</p>
+      </div>
+      <ol class="steps">
+        <li><div><h3>Baixe e abra o instalador</h3><p>O arquivo é <code>DynamicIsland-Setup-1.0.0.exe</code>.</p></div></li>
+        <li><div><h3>Se aparecer “O Windows protegeu o computador”</h3><p>Clique em <strong>Mais informações</strong> e depois em <strong>Executar assim mesmo</strong>. O SmartScreen avisa porque o instalador ainda não tem um certificado de assinatura de código (pago).</p></div></li>
+        <li><div><h3>Escolha as opções</h3><p><strong>Iniciar o Dynamic Island junto com o Windows</strong> já vem marcado. Também dá para criar um ícone na área de trabalho e trocar a pasta de instalação.</p></div></li>
+        <li><div><h3>Concluir</h3><p>Com “Abrir o Dynamic Island agora” marcado, a ilha aparece no topo da tela.</p></div></li>
+      </ol>
+    </div>
+    <div class="wrap two-col" style="margin-top:48px">
+      <div class="callout">
+        <strong>Atualizar</strong>
+        <p>Rode o instalador da versão nova por cima. Se a ilha estiver aberta, ele fecha antes de trocar os arquivos. A opção de iniciar com o Windows segue o que você marcar nessa instalação.</p>
+      </div>
+      <div class="callout">
+        <strong>Desinstalar</strong>
+        <p>Configurações do Windows → Aplicativos → Aplicativos instalados → Dynamic Island → Desinstalar. Remove os arquivos, os atalhos e a inicialização com o Windows.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Como usar ===== -->
+  <section id="como-usar">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Como usar</span>
+        <h2>Tudo no mouse</h2>
+        <p class="lead">A ilha nunca pega o teclado nem tira o foco da janela em que você está. Por isso os números (alarme, timer) mudam com setas e com a roda do mouse.</p>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th scope="col">Você faz</th><th scope="col">A ilha responde</th></tr></thead>
+          <tbody>
+            <tr><td>Passa o mouse na pílula</td><td>Ela cresce um pouquinho, pronta para o clique.</td></tr>
+            <tr><td>Clica na pílula</td><td>Abre o painel. Tirando o mouse de cima, ela fecha sozinha depois de meio segundo.</td></tr>
+            <tr><td>Clica em voltar, pausar ou avançar</td><td>Controla a música sem abrir o painel.</td></tr>
+            <tr><td>Clica na hora (painel aberto)</td><td>Abre o Relógio: Alarme, Cronômetro, Timer e Pomodoro.</td></tr>
+            <tr><td>Rola a roda do mouse nos números</td><td>Muda horas, minutos e segundos. No volume, sobe e desce o som.</td></tr>
+            <tr><td>Clica no Wi-Fi / no sininho</td><td>Abre a lista de redes / a lista de notificações.</td></tr>
+            <tr><td>Clica no clima</td><td>Abre as Configurações para escolher a cidade.</td></tr>
+            <tr><td>Clique direito na ilha</td><td>Menu com Configurações e Sair.</td></tr>
+            <tr><td>Ícone na bandeja (perto do relógio)</td><td>Clique: Configurações. Clique direito: mostrar/esconder a ilha, iniciar com o Windows, sair.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Privacidade ===== -->
+  <section id="privacidade">
+    <div class="wrap two-col">
+      <div class="section-head" style="margin:0">
+        <span class="eyebrow">Privacidade</span>
+        <h2>O que a ilha lê, e por quê</h2>
+        <p class="lead">Não tem conta, não tem anúncio e não manda estatística de uso. A única conexão com a internet é a previsão do tempo.</p>
+      </div>
+      <ul class="plain-list">
+        <li><strong>Mídia tocando</strong><span>Título, artista e capa, pelo controle de mídia do próprio Windows. Fica no seu PC.</span></li>
+        <li><strong>Título das janelas do navegador</strong><span>Só para descobrir qual site está tocando (YouTube, Netflix…). Não lê histórico nem endereços, e nada sai do PC.</span></li>
+        <li><strong>Notificações</strong><span>Lidas da central de notificações do Windows para aparecer na ilha. Ficam só na memória do app.</span></li>
+        <li><strong>Clima</strong><span>A cidade escolhida é enviada ao <a href="https://open-meteo.com" target="_blank" rel="noopener">Open-Meteo</a>, serviço gratuito e sem cadastro, para buscar a previsão.</span></li>
+        <li><strong>Volume e Wi-Fi</strong><span>Lidos e ajustados direto no Windows, sem internet.</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===== Por dentro ===== -->
+  <section id="por-dentro">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Por dentro</span>
+        <h2>Como é feito</h2>
+        <p class="lead">Um app de desktop nativo em C#, sem navegador embutido. A ilha é uma janela transparente, sempre por cima, que desenha o próprio formato e anima o tamanho com física de mola.</p>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th scope="col">Parte</th><th scope="col">Como funciona</th></tr></thead>
+          <tbody>
+            <tr><td>Interface</td><td>WPF no .NET 10, padrão MVVM (CommunityToolkit.Mvvm). Largura, altura e cantos animados por uma mola amortecida calculada a cada quadro.</td></tr>
+            <tr><td>Música</td><td>API <code>GlobalSystemMediaTransportControlsSessionManager</code> do Windows (a mesma do overlay de mídia).</td></tr>
+            <tr><td>Site no navegador</td><td>Compara o título da mídia com o título das janelas do navegador e reconhece o site pelo nome que aparece no título.</td></tr>
+            <tr><td>Volume</td><td>Core Audio do Windows (NAudio), acompanhando quando o dispositivo de saída muda.</td></tr>
+            <tr><td>Wi-Fi</td><td>Native Wifi API (ManagedNativeWifi) para redes e conexão; <code>Windows.Devices.Radios</code> para ligar e desligar sem administrador.</td></tr>
+            <tr><td>Notificações</td><td><code>UserNotificationListener</code>, consultando a central a cada 1,5 s (o evento de notificação nova não existe para apps fora da Loja).</td></tr>
+            <tr><td>Clima</td><td>Open-Meteo (busca de cidade e previsão), atualizado a cada 15 minutos.</td></tr>
+            <tr><td>Bandeja</td><td>H.NotifyIcon, com menus no mesmo tema da ilha.</td></tr>
+            <tr><td>Instalador</td><td>Inno Setup 6, instalação por usuário, .NET embutido (self-contained) e opção de iniciar com o Windows pela chave <code>HKCU\…\Run</code>.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="two-col" style="margin-top:40px">
+        <div style="display:grid;gap:12px;align-content:start;min-width:0">
+          <h3>Rodar a partir do código</h3>
+          <p class="lead" style="font-size:1rem">Precisa do .NET 10 SDK.</p>
+          <pre><code>dotnet run --project DynamicIsland\DynamicIsland.csproj</code></pre>
+        </div>
+        <div style="display:grid;gap:12px;align-content:start;min-width:0">
+          <h3>Gerar o instalador</h3>
+          <p class="lead" style="font-size:1rem">Precisa também do Inno Setup 6. O script publica o app, compila o instalador em <code>installer\Output</code> e atualiza a cópia em <code>site\downloads</code>.</p>
+          <pre><code>powershell -ExecutionPolicy Bypass -File installer\build-installer.ps1</code></pre>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Limitações ===== -->
+  <section id="limitacoes">
+    <div class="wrap two-col">
+      <div class="section-head" style="margin:0">
+        <span class="eyebrow">Limitações conhecidas</span>
+        <h2>O que o Windows não deixa fazer</h2>
+      </div>
+      <ul class="plain-list">
+        <li><strong>Site numa aba de fundo</strong><span>O título da janela só mostra a aba ativa. Se a música começar numa aba que você nunca abriu, aparece o ícone do navegador até você passar por ela.</span></li>
+        <li><strong>Clique em notificação</strong><span>Abre o app ou o navegador, não a conversa ou a página exata. O Windows não entrega o endereço do site nem a ação original. Instalar o site como app (Chrome/Edge → “Instalar como app”) faz o clique abrir o próprio site.</span></li>
+        <li><strong>Alarmes</strong><span>Tocam com a ilha aberta. Com o PC em suspensão no horário, o alarme não toca ao acordar.</span></li>
+        <li><strong>Vidro</strong><span>É transparência, sem desfoque: o desfoque do Windows não acompanha cantos arredondados animados sem pesar.</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===== Notificações ===== -->
+  <section id="notificacoes">
+    <div class="wrap two-col">
+      <div class="section-head" style="margin:0">
+        <span class="eyebrow">Notificações</span>
+        <h2>Ficar só com as da ilha</h2>
+        <p class="lead">A ilha lê a central de notificações do Windows. Então dá para esconder os banners do Windows e continuar recebendo tudo na ilha.</p>
+      </div>
+      <ul class="plain-list">
+        <li><strong>Mais simples: Não perturbe</strong><span>Os banners do Windows somem, mas as notificações continuam chegando na central e aparecem na ilha.</span></li>
+        <li><strong>App por app</strong><span>Configurações → Sistema → Notificações → escolha o app → desligue “Mostrar faixas de notificação” e deixe ligado “Mostrar notificações na central de notificações”.</span></li>
+        <li><strong>O que não fazer</strong><span>Desligar as notificações de vez (ou de um app): aí o Windows descarta antes de chegar na central, e a ilha também não recebe.</span></li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>Dynamic Island para Windows · versão 1.0.0</span>
+    <nav class="foot-links" aria-label="Rodapé">
+      <a href="index.html">Início</a>
+      <a href="index.html#apoiar">Apoiar</a>
+    </nav>
+    <span>Não é afiliado à Apple, Microsoft ou aos serviços citados.</span>
+  </div>
+</footer>
+
+<script>
+  // Pré-visualização (sem o instalador ao lado): o botão leva pra instalação
+  if (document.documentElement.dataset.preview === "1") {
+    document.querySelectorAll(".download-link").forEach(a => { a.removeAttribute("download"); a.href = "#instalacao"; });
+  }
+</script>
+</body>
+</html>

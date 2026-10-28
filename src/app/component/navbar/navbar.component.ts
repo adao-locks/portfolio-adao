@@ -3,17 +3,6 @@ import { Component } from '@angular/core';
 @Component({
     selector: 'app-navbar',
     imports: [],
-    templateUrl: './navbar.component.html',
-    styleUrl: './navbar.component.css'
+    templateUrl: './navbar.component.html'
 })
-export class NavbarComponent {
-  isOpen = false;
-
-  toggleMenu() {
-    this.isOpen = !this.isOpen;
-  }
-
-  closeMenu() {
-    this.isOpen = false;
-  }
-}
+export class NavbarComponent {}

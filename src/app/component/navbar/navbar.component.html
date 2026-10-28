@@ -1,22 +1,15 @@
-<nav class="navbar" [class.is-open]="isOpen">
-  <div class="nav-shell">
-    <a href="#" class="brand" (click)="closeMenu()" aria-label="Voltar ao início">
+<header class="topbar gutter">
+  <div class="topbar-in">
+    <a href="#inicio" class="brand" aria-label="Voltar ao início">
       <span class="brand-mark">EA</span>
       <span>Adão.dev</span>
     </a>
 
-    <button class="menu-toggle" type="button" (click)="toggleMenu()" aria-label="Abrir menu">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-
-    <div class="nav-links">
-      <a href="#sobre" (click)="closeMenu()">Sobre</a>
-      <a href="#skills" (click)="closeMenu()">Habilidades</a>
-      <a href="#xp" (click)="closeMenu()">Experiências</a>
-      <a href="#projetos" (click)="closeMenu()">Projetos</a>
-      <a href="#contato" (click)="closeMenu()">Contato</a>
-    </div>
+    <nav class="top-links" aria-label="Seções">
+      <a class="link" href="#case">Cases</a>
+      <a class="link" href="#projetos">Projetos</a>
+      <a class="link" href="#experiencia">Experiência</a>
+      <a class="btn primary" href="#contato">Contato</a>
+    </nav>
   </div>
-</nav>
+</header>

@@ -3,9 +3,6 @@ import { Component } from '@angular/core';
 @Component({
     selector: 'app-experiences',
     imports: [],
-    templateUrl: './experiences.component.html',
-    styleUrl: './experiences.component.css'
+    templateUrl: './experiences.component.html'
 })
-export class ExperiencesComponent {
-
-}
+export class ExperiencesComponent {}

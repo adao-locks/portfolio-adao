@@ -1,0 +1,104 @@
+<section id="case">
+  <div class="sh">
+    <span class="label">Cases para clientes</span>
+    <h2>Dois sistemas completos, do requisito ao deploy</h2>
+  </div>
+
+  <div class="cases">
+    <article class="case">
+      <div class="case-top">
+        <div class="txt">
+          <span class="who">Fiobras LTDA · Indústria</span>
+          <h3>Sistema de eficiência produtiva</h3>
+          <p>
+            Em 2022 trabalhei no PPCP da Fiobras controlando a eficiência da produção. Depois voltei como
+            desenvolvedor e construí o sistema que hoje os líderes da empresa usam todos os dias.
+          </p>
+          <div class="tags">
+            <span class="tag ok">Em uso diário</span>
+            <span class="tag hl">C#</span>
+            <span class="tag hl">.NET</span>
+            <span class="tag hl">Flutter</span>
+            <span class="tag">Dart</span>
+            <span class="tag">Firebase</span>
+            <span class="tag">HTML / CSS / JS</span>
+          </div>
+        </div>
+        <div class="phone" aria-hidden="true">
+          <div class="ph-h"></div>
+          <div class="ph-t"><i class="on">T1</i><i>T2</i><i>T3</i></div>
+          <div class="ph-rows">
+            <b style="width: 92%"></b><b style="width: 70%"></b><b style="width: 84%"></b>
+            <b style="width: 58%"></b><b style="width: 77%"></b><b style="width: 66%"></b>
+          </div>
+        </div>
+      </div>
+
+      <div class="psr">
+        <div>
+          <span class="label">Problema</span>
+          <p>Acompanhar a produção de vários setores e turnos e transformar esses registros em informação para a liderança.</p>
+        </div>
+        <div>
+          <span class="label">Solução</span>
+          <p>Back-end em C# / .NET, app em Flutter e Firebase para registrar a produção por turno, acompanhar cada setor e gerar relatórios.</p>
+        </div>
+        <div>
+          <span class="label">Resultado</span>
+          <p>Usado diariamente pelos líderes para controle operacional, análise de demanda e decisões.</p>
+        </div>
+      </div>
+
+      <span class="label stages-h">Etapas que conduzi sozinho</span>
+      <ol class="stages" aria-label="Etapas do projeto">
+        @for (stage of fiobrasStages; track stage) {
+          <li>{{ stage }}</li>
+        }
+      </ol>
+    </article>
+
+    <article class="case">
+      <div class="case-top">
+        <div class="txt">
+          <span class="who">Jezi Barber · Barbearia</span>
+          <h3>Cadeira Reserva</h3>
+          <p>
+            Aplicação web de reservas: o cliente escolhe o horário e a barbearia controla a agenda e a disponibilidade
+            de cada cadeira. Desenvolvi de ponta a ponta, com versionamento em Git e boas práticas de desenvolvimento.
+          </p>
+          <div class="tags">
+            <span class="tag hl">C#</span>
+            <span class="tag hl">ASP.NET Core MVC</span>
+            <span class="tag hl">EF Core</span>
+            <span class="tag">SQL Server / MySQL</span>
+            <span class="tag">Bootstrap</span>
+            <span class="tag">Git</span>
+          </div>
+        </div>
+        <div class="slots" aria-hidden="true">
+          <div>09:00<i class="on"></i></div>
+          <div>10:00<i></i></div>
+          <div>11:00<i class="on"></i></div>
+          <div>13:00<i class="on"></i></div>
+          <div>14:00<i></i></div>
+          <div>15:00<i></i></div>
+        </div>
+      </div>
+
+      <div class="psr">
+        <div>
+          <span class="label">Back-end</span>
+          <p>Arquitetura MVC, modelagem do banco com Entity Framework Core e regras de negócio de agendamento.</p>
+        </div>
+        <div>
+          <span class="label">Segurança</span>
+          <p>Autenticação de usuários e controle de quem pode reservar, alterar e liberar horários.</p>
+        </div>
+        <div>
+          <span class="label">Interface</span>
+          <p>Telas em HTML, CSS, JavaScript e Bootstrap para o cliente reservar e para a equipe gerenciar a agenda.</p>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>

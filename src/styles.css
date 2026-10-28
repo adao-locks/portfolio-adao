@@ -2,25 +2,5 @@
 @import './styles/base.css';
 @import './styles/layout.css';
 @import './styles/components.css';
+@import './styles/sections.css';
 @import './styles/utilities.css';
-
-:root {
-  --pc: #26c6da;
-  --sc: #ffb703;
-  --accent: #ff5c8a;
-  --tc: #f6f7fb;
-  --muted: #a8b3c7;
-  --bc: #0a0d14;
-  --fc: #141925;
-  --surface: rgba(20, 25, 37, 0.82);
-  --line: rgba(255, 255, 255, 0.12);
-  --shadow: 0 24px 70px rgba(0, 0, 0, 0.34);
-}
-
-* {
-  padding: 0;
-  margin: 0;
-  font-family: "Rubik", sans-serif;
-  font-weight: 400;
-  color: var(--tc);
-}
