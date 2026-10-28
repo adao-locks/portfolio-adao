@@ -7,9 +7,9 @@ import { Component } from '@angular/core';
 })
 export class SkillstreeComponent {
   readonly proven = [
-    { name: 'C# + .NET', where: 'Sistema da Fiobras, Cadeira Reserva (ASP.NET Core MVC, EF Core), Dynamic Island (WPF) e melhorias na Sisplan' },
-    { name: 'SQL', where: 'Consultas críticas ~90% mais rápidas na Sisplan; SQL Server e MySQL no Cadeira Reserva' },
-    { name: 'Delphi', where: 'Melhorias no sistema da Sisplan e o SalesPlus, desktop de vendas e estoque' },
+    { name: 'C# + .NET', where: 'ReportForge, Dynamic Island' },
+    { name: 'SQL', where: 'Consultas críticas ~90% mais rápidas na Sisplan; Oracle, PostgreSQL, SQL Server e MySQL' },
+    { name: 'Delphi', where: 'Melhorias no sistema da Sisplan' },
     { name: 'Flutter + Dart', where: 'App de eficiência produtiva da Fiobras, com Firebase' },
     { name: 'Angular + TypeScript', where: 'CS2 Map Selector e este portfólio' },
     { name: 'QA', where: 'Planejamento e execução de testes na rotina da Sisplan' },

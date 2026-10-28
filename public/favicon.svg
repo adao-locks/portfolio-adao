@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <!-- Monograma "EA", mesmo selo da navbar (.brand-mark); cores seguem os tokens do tema. -->
+  <style>
+    .bg { fill: #0a7380; }
+    .fg { fill: #ffffff; }
+    @media (prefers-color-scheme: dark) {
+      .bg { fill: #47c8d5; }
+      .fg { fill: #052a2e; }
+    }
+  </style>
+  <rect class="bg" width="32" height="32" rx="7"/>
+  <path class="fg" d="M7.2 10H13.8V12.5H10.1V14.8H13.2V17.2H10.1V19.5H13.9V22H7.2Z"/>
+  <path class="fg" fill-rule="evenodd" d="M15.3 22L18.7 10H21.7L25.1 22H22.1L21.5 19.6H18.9L18.3 22ZM19.4 17.3H21L20.2 13.6Z"/>
+</svg>

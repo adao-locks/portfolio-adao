@@ -304,7 +304,7 @@ section {
   opacity: 0.35;
 }
 
-.slots {
+.nr {
   width: 100%;
   max-width: 190px;
   padding: 12px;
@@ -315,23 +315,61 @@ section {
   gap: 6px;
 }
 
-.slots div {
-  display: grid;
-  grid-template-columns: 34px 1fr;
-  gap: 8px;
-  align-items: center;
-  font: 400 0.62rem var(--f-mono);
+.nr .nr-h {
+  font: 500 0.6rem var(--f-mono);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
   color: var(--muted);
 }
 
-.slots i {
-  height: 14px;
-  border-radius: 4px;
-  background: var(--line);
+.nr .nr-h + div {
+  margin-top: 2px;
 }
 
-.slots i.on {
-  background: var(--accent);
+.nr div + .nr-h {
+  margin-top: 6px;
+}
+
+.nr div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  font: 500 0.7rem var(--f-mono);
+}
+
+.nr i {
+  padding: 1px 7px;
+  border-radius: 999px;
+  font: 500 0.62rem/1.5 var(--f-mono);
+  font-style: normal;
+}
+
+.nr i.late {
+  background: color-mix(in srgb, var(--danger) 14%, transparent);
+  color: var(--danger);
+}
+
+.nr i.soon {
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+
+.nr i.ok {
+  background: color-mix(in srgb, var(--signal) 14%, transparent);
+  color: var(--signal);
+}
+
+.case-link {
+  justify-self: start;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.case-link:hover {
+  text-decoration: underline;
 }
 
 /* Projetos */
@@ -729,7 +767,7 @@ a.channel:hover {
   }
 
   .phone,
-  .slots {
+  .nr {
     display: none;
   }
 
