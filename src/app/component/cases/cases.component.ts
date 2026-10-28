@@ -16,4 +16,15 @@ export class CasesComponent {
     'Testes',
     'Deploy e manutenção',
   ];
+
+  readonly noPrumoDeliveries = [
+    'Ficha de EPI com assinatura',
+    'Baixa de estoque em transação',
+    'Bloqueio de EPI com CA vencido',
+    'Devolução e perda de EPI',
+    'Vencimento de NR no domínio',
+    'Alerta de NR na equipe da obra',
+    'Agenda de compromissos',
+    'Refatoração e code review',
+  ];
 }

@@ -11,7 +11,7 @@ import { MessageService } from '../../service/message.service';
 export class ProfileComponent {
   readonly profile = PROFILE;
   readonly sections = [
-    { id: 'case', label: 'Cases para clientes' },
+    { id: 'case', label: 'Cases' },
     { id: 'projetos', label: 'Projetos pessoais' },
     { id: 'experiencia', label: 'Experiência' },
     { id: 'formacao', label: 'Formação' },

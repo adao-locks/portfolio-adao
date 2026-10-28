@@ -1,7 +1,7 @@
 <section id="case">
   <div class="sh">
-    <span class="label">Cases para clientes</span>
-    <h2>Dois sistemas completos, do requisito ao deploy</h2>
+    <span class="label">Cases</span>
+    <h2>Dois sistemas de gestão, do banco à interface</h2>
   </div>
 
   <div class="cases">
@@ -16,12 +16,9 @@
           </p>
           <div class="tags">
             <span class="tag ok">Em uso diário</span>
-            <span class="tag hl">C#</span>
-            <span class="tag hl">.NET</span>
             <span class="tag hl">Flutter</span>
             <span class="tag">Dart</span>
             <span class="tag">Firebase</span>
-            <span class="tag">HTML / CSS / JS</span>
           </div>
         </div>
         <div class="phone" aria-hidden="true">
@@ -60,45 +57,57 @@
     <article class="case">
       <div class="case-top">
         <div class="txt">
-          <span class="who">Jezi Barber · Barbearia</span>
-          <h3>Cadeira Reserva</h3>
+          <span class="who">Entra21 · Projeto Integrador · Equipe de 5</span>
+          <h3>NoPrumo · Gestão de obras</h3>
           <p>
-            Aplicação web de reservas: o cliente escolhe o horário e a barbearia controla a agenda e a disponibilidade
-            de cada cadeira. Desenvolvi de ponta a ponta, com versionamento em Git e boas práticas de desenvolvimento.
+            Sistema para construtoras que junta obras e etapas, equipes, estoque, compras, custos e segurança do
+            trabalho, com cada perfil vendo só o que o trabalho dele pede. Na equipe, fiquei com o módulo de segurança
+            do trabalho e equipes, do domínio no back-end às telas em React.
           </p>
           <div class="tags">
+            <span class="tag ok">Em equipe, com code review</span>
             <span class="tag hl">C#</span>
-            <span class="tag hl">ASP.NET Core MVC</span>
-            <span class="tag hl">EF Core</span>
-            <span class="tag">SQL Server / MySQL</span>
-            <span class="tag">Bootstrap</span>
-            <span class="tag">Git</span>
+            <span class="tag hl">.NET 8</span>
+            <span class="tag hl">Clean Architecture</span>
+            <span class="tag">EF Core</span>
+            <span class="tag">MySQL</span>
+            <span class="tag">React</span>
+            <span class="tag">JWT</span>
           </div>
+          <a class="case-link" href="https://github.com/GabrielHenriqueCe/NoPrumo" target="_blank" rel="noopener">Ver repositório no GitHub →</a>
         </div>
-        <div class="slots" aria-hidden="true">
-          <div>09:00<i class="on"></i></div>
-          <div>10:00<i></i></div>
-          <div>11:00<i class="on"></i></div>
-          <div>13:00<i class="on"></i></div>
-          <div>14:00<i></i></div>
-          <div>15:00<i></i></div>
+        <div class="nr" aria-hidden="true">
+          <span class="nr-h">Treinamentos</span>
+          <div>NR-35<i class="late">vencido</i></div>
+          <div>NR-10<i class="soon">12 dias</i></div>
+          <div>NR-18<i class="ok">em dia</i></div>
+          <div>NR-06<i class="ok">em dia</i></div>
+          <span class="nr-h">Ficha de EPI</span>
+          <div>Assinada<i class="ok">SHA-256</i></div>
         </div>
       </div>
 
       <div class="psr">
         <div>
-          <span class="label">Back-end</span>
-          <p>Arquitetura MVC, modelagem do banco com Entity Framework Core e regras de negócio de agendamento.</p>
+          <span class="label">Problema</span>
+          <p>Na obra, o EPI entregue fica numa ficha de papel e o treinamento de NR vencido só aparece quando alguém confere a planilha.</p>
         </div>
         <div>
-          <span class="label">Segurança</span>
-          <p>Autenticação de usuários e controle de quem pode reservar, alterar e liberar horários.</p>
+          <span class="label">Minha parte</span>
+          <p>Treinamentos de NR, ficha de EPI, agenda de vencimentos e equipes na obra: entidades, services, repositórios, endpoints e telas.</p>
         </div>
         <div>
-          <span class="label">Interface</span>
-          <p>Telas em HTML, CSS, JavaScript e Bootstrap para o cliente reservar e para a equipe gerenciar a agenda.</p>
+          <span class="label">Regras no código</span>
+          <p>Vencimento calculado no domínio, nunca gravado. EPI com CA vencido não sai do depósito, e a entrega dá baixa no estoque na mesma transação.</p>
         </div>
       </div>
+
+      <span class="label stages-h">O que construí no módulo</span>
+      <ol class="stages" aria-label="Entregas no módulo de segurança e equipes">
+        @for (delivery of noPrumoDeliveries; track delivery) {
+          <li>{{ delivery }}</li>
+        }
+      </ol>
     </article>
   </div>
 </section>
