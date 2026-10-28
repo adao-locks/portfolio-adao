@@ -34,6 +34,11 @@
                 "glob": "**/*",
                 "input": "src/dynamic-island/",
                 "output": "/dynamic-island/"
+              },
+              {
+                "glob": "**/*",
+                "input": "src/reportforge/",
+                "output": "/reportforge/"
               }
             ],
             "styles": [

@@ -30,14 +30,14 @@ export class ProjectsComponent {
       primary: { label: 'Ver o site', url: '/dynamic-island/' },
     },
     {
-      name: 'SalesPlus',
-      kind: 'Desktop',
-      address: 'SalesPlus.exe',
-      description: 'Aplicação desktop para gestão de vendas, pedidos e estoque.',
-      shows: 'regras de negócio de um sistema de gestão, do pedido ao estoque.',
-      tags: ['Delphi', 'Desktop', 'Release beta'],
-      primary: { label: 'Baixar instalador', url: 'https://github.com/adao-locks/GestaoDeVendas/releases/tag/Beta' },
-      code: 'https://github.com/adao-locks/GestaoDeVendas',
+      name: 'ReportForge',
+      kind: 'Desktop · Windows',
+      address: 'vendas-por-cliente.rf.json',
+      description: 'Designer de relatórios em bandas: liga ao banco com SQL e exporta para PDF, HTML ou CSV.',
+      shows: 'motor de relatórios em C# que também roda dentro de um ERP, sem abrir o designer.',
+      tags: ['C#', 'WinForms', '.NET', 'SQL'],
+      // Código fechado: o card leva só ao site do projeto, publicado em src/reportforge
+      primary: { label: 'Ver o site', url: '/reportforge/' },
     },
     {
       name: 'CS2 Map Selector',
