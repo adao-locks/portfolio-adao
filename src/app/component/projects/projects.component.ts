@@ -22,7 +22,7 @@ export class ProjectsComponent {
     {
       name: 'Dynamic Island',
       kind: 'Desktop · Windows',
-      address: 'DynamicIsland-Setup.exe',
+      address: 'DynamicIslandSetup.exe',
       description: 'A Dynamic Island do iPhone no Windows: música, timers e notificações no topo da tela.',
       shows: 'app nativo em C#/WPF integrado às APIs do Windows, com instalador próprio.',
       tags: ['C#', 'WPF', '.NET'],
