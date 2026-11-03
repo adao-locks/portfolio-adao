@@ -24,7 +24,7 @@
       <a href="#privacidade">Privacidade</a>
       <a href="#por-dentro">Por dentro</a>
     </nav>
-    <a class="btn btn-primary btn-small download-link" href="downloads/DynamicIsland-Setup-1.0.0.exe" download>Baixar grátis</a>
+    <a class="btn btn-primary btn-small download-link" href="https://github.com/adao-locks/DynamicIsland-releases/releases/download/v1.1.8/DynamicIslandSetup-1.1.8.exe">Baixar grátis</a>
   </div>
 </header>
 
@@ -54,7 +54,7 @@
       </div>
       <div class="specs">
         <div class="spec"><span class="k">Sistema</span><span class="v">Windows 10 (2004+) ou 11</span><p>Versão 64 bits (x64). Build mínimo 19041.</p></div>
-        <div class="spec"><span class="k">Download</span><span class="v">48 MB</span><p>O .NET vai junto no instalador: não precisa instalar mais nada.</p></div>
+        <div class="spec"><span class="k">Download</span><span class="v">49 MB</span><p>O .NET vai junto no instalador: não precisa instalar mais nada.</p></div>
         <div class="spec"><span class="k">Instalado</span><span class="v">~165 MB</span><p>Na pasta de programas do seu usuário, sem afetar as outras contas do PC.</p></div>
         <div class="spec"><span class="k">Memória</span><span class="v">~60 MB</span><p>Uso típico de RAM com música tocando.</p></div>
         <div class="spec"><span class="k">Processador</span><span class="v">2–4% de um núcleo</span><p>Com música e o equalizador animando. Parada, fica perto de zero.</p></div>
@@ -63,11 +63,11 @@
       <div class="two-col" style="margin-top:40px">
         <div class="callout">
           <strong>Onde ficam os arquivos</strong>
-          <p>O app fica em <code>%LOCALAPPDATA%\Programs\Dynamic Island</code>. Cidade do clima, alarmes, tema e o resto ficam em <code>%APPDATA%\DynamicIsland\settings.json</code>. Desinstalar mantém as configurações, então reinstalar volta do jeito que estava.</p>
+          <p>O app fica em <code>%LOCALAPPDATA%\Programs\Dynamic Island</code>. Cidade do clima, alarmes, tema e o resto ficam em <code>%APPDATA%\DynamicIsland\settings.json</code>. Se a ilha fechar por algum erro, o motivo fica em <code>diagnostico.log</code>, na mesma pasta. Desinstalar mantém as configurações, então reinstalar volta do jeito que estava.</p>
         </div>
         <div class="callout">
           <strong>Telas e escala</strong>
-          <p>A ilha aparece no topo da tela principal e respeita a escala do Windows (100%, 125%, 150%…). Em jogos e vídeos em tela cheia ela continua por cima.</p>
+          <p>A ilha começa no topo da tela principal, mas dá para arrastar para o topo ou as laterais de qualquer monitor. Respeita a escala do Windows (100%, 125%, 150%…). Em jogos e vídeos em tela cheia ela continua por cima.</p>
         </div>
       </div>
     </div>
@@ -80,10 +80,10 @@
         <span class="eyebrow">Instalação</span>
         <h2>Passo a passo</h2>
         <p class="lead">O instalador está em português (troca para inglês se o Windows estiver em inglês) e instala só para o seu usuário.</p>
-        <p class="cta-meta">DynamicIsland-Setup-1.0.0.exe · 48 MB</p>
+        <p class="cta-meta">DynamicIslandSetup-1.1.8.exe · 49 MB</p>
       </div>
       <ol class="steps">
-        <li><div><h3>Baixe e abra o instalador</h3><p>O arquivo é <code>DynamicIsland-Setup-1.0.0.exe</code>.</p></div></li>
+        <li><div><h3>Baixe e abra o instalador</h3><p>O arquivo é <code>DynamicIslandSetup-1.1.8.exe</code>.</p></div></li>
         <li><div><h3>Se aparecer “O Windows protegeu o computador”</h3><p>Clique em <strong>Mais informações</strong> e depois em <strong>Executar assim mesmo</strong>. O SmartScreen avisa porque o instalador ainda não tem um certificado de assinatura de código (pago).</p></div></li>
         <li><div><h3>Escolha as opções</h3><p><strong>Iniciar o Dynamic Island junto com o Windows</strong> já vem marcado. Também dá para criar um ícone na área de trabalho e trocar a pasta de instalação.</p></div></li>
         <li><div><h3>Concluir</h3><p>Com “Abrir o Dynamic Island agora” marcado, a ilha aparece no topo da tela.</p></div></li>
@@ -92,7 +92,7 @@
     <div class="wrap two-col" style="margin-top:48px">
       <div class="callout">
         <strong>Atualizar</strong>
-        <p>Rode o instalador da versão nova por cima. Se a ilha estiver aberta, ele fecha antes de trocar os arquivos. A opção de iniciar com o Windows segue o que você marcar nessa instalação.</p>
+        <p>A ilha avisa quando sai uma versão nova e instala sozinha (Configurações → Atualizações). Também dá para rodar o instalador da versão nova por cima: se a ilha estiver aberta, ele fecha antes de trocar os arquivos.</p>
       </div>
       <div class="callout">
         <strong>Desinstalar</strong>
@@ -114,13 +114,19 @@
           <thead><tr><th scope="col">Você faz</th><th scope="col">A ilha responde</th></tr></thead>
           <tbody>
             <tr><td>Passa o mouse na pílula</td><td>Ela cresce um pouquinho, pronta para o clique.</td></tr>
-            <tr><td>Clica na pílula</td><td>Abre o painel. Tirando o mouse de cima, ela fecha sozinha depois de meio segundo.</td></tr>
+            <tr><td>Clica na pílula</td><td>Abre o painel. Tirando o mouse de cima, ela fecha sozinha depois de 1,5 segundo; clicando fora, fecha na hora.</td></tr>
+            <tr><td>Arrasta a ilha</td><td>Ela gruda no topo ou nas laterais da tela, em qualquer monitor. Aberta, pegue numa área vazia do painel. Nas laterais a pílula fica em pé.</td></tr>
             <tr><td>Clica em voltar, pausar ou avançar</td><td>Controla a música sem abrir o painel.</td></tr>
+            <tr><td>Clica ou arrasta a barra da música</td><td>Pula para outra parte da música, quando o player deixa (Spotify, YouTube…).</td></tr>
             <tr><td>Clica na hora (painel aberto)</td><td>Abre o Relógio: Alarme, Cronômetro, Timer e Pomodoro.</td></tr>
             <tr><td>Rola a roda do mouse nos números</td><td>Muda horas, minutos e segundos. No volume, sobe e desce o som.</td></tr>
             <tr><td>Clica no Wi-Fi / no sininho</td><td>Abre a lista de redes / a lista de notificações.</td></tr>
-            <tr><td>Clica no clima</td><td>Abre as Configurações para escolher a cidade.</td></tr>
+            <tr><td>Clica no clima</td><td>Abre o clima na ilha: agora, próximas horas, próximos 5 dias, umidade, vento, chuva e pôr do sol.</td></tr>
+            <tr><td>Clica numa notificação</td><td>Traz o app que mandou para a frente, ou abre, se estiver fechado.</td></tr>
+            <tr><td>Clica na engrenagem (painel aberto)</td><td>Abre as Configurações, com um menu lateral por seção.</td></tr>
             <tr><td>Clique direito na ilha</td><td>Menu com Configurações e Sair.</td></tr>
+            <tr><td><kbd>Ctrl + Alt + P</kbd> · <kbd>← / →</kbd></td><td>Toca/pausa e troca de faixa, em qualquer app.</td></tr>
+            <tr><td><kbd>Ctrl + Alt + ↑ / ↓</kbd> · <kbd>M</kbd></td><td>Sobe, desce ou tira o som. A ilha mostra o nível numa barra que enche como líquido. Dá para trocar os atalhos em Configurações → Atalhos.</td></tr>
             <tr><td>Ícone na bandeja (perto do relógio)</td><td>Clique: Configurações. Clique direito: mostrar/esconder a ilha, iniciar com o Windows, sair.</td></tr>
           </tbody>
         </table>
@@ -134,13 +140,14 @@
       <div class="section-head" style="margin:0">
         <span class="eyebrow">Privacidade</span>
         <h2>O que a ilha lê, e por quê</h2>
-        <p class="lead">Não tem conta, não tem anúncio e não manda estatística de uso. A única conexão com a internet é a previsão do tempo.</p>
+        <p class="lead">Não tem conta, não tem anúncio e não manda estatística de uso. Na internet, só busca a previsão do tempo e confere se saiu versão nova.</p>
       </div>
       <ul class="plain-list">
         <li><strong>Mídia tocando</strong><span>Título, artista e capa, pelo controle de mídia do próprio Windows. Fica no seu PC.</span></li>
         <li><strong>Título das janelas do navegador</strong><span>Só para descobrir qual site está tocando (YouTube, Netflix…). Não lê histórico nem endereços, e nada sai do PC.</span></li>
         <li><strong>Notificações</strong><span>Lidas da central de notificações do Windows para aparecer na ilha. Ficam só na memória do app.</span></li>
         <li><strong>Clima</strong><span>A cidade escolhida é enviada ao <a href="https://open-meteo.com" target="_blank" rel="noopener">Open-Meteo</a>, serviço gratuito e sem cadastro, para buscar a previsão.</span></li>
+        <li><strong>Atualizações</strong><span>A ilha consulta as versões publicadas no <a href="https://github.com/adao-locks/DynamicIsland-releases/releases" target="_blank" rel="noopener">GitHub</a> e baixa o instalador novo de lá. Nenhum dado seu vai junto.</span></li>
         <li><strong>Volume e Wi-Fi</strong><span>Lidos e ajustados direto no Windows, sem internet.</span></li>
       </ul>
     </div>
@@ -194,7 +201,7 @@
       </div>
       <ul class="plain-list">
         <li><strong>Site numa aba de fundo</strong><span>O título da janela só mostra a aba ativa. Se a música começar numa aba que você nunca abriu, aparece o ícone do navegador até você passar por ela.</span></li>
-        <li><strong>Clique em notificação</strong><span>Abre o app ou o navegador, não a conversa ou a página exata. O Windows não entrega o endereço do site nem a ação original. Instalar o site como app (Chrome/Edge → “Instalar como app”) faz o clique abrir o próprio site.</span></li>
+        <li><strong>Clique em notificação</strong><span>Traz o app ou o navegador para a frente, não a conversa ou a página exata. O Windows não entrega o endereço do site nem a ação original. Instalar o site como app (Chrome/Edge → “Instalar como app”) faz o clique abrir o próprio site.</span></li>
         <li><strong>Alarmes</strong><span>Tocam com a ilha aberta. Com o PC em suspensão no horário, o alarme não toca ao acordar.</span></li>
         <li><strong>Vidro</strong><span>É transparência, sem desfoque: o desfoque do Windows não acompanha cantos arredondados animados sem pesar.</span></li>
       </ul>
@@ -220,7 +227,7 @@
 
 <footer>
   <div class="wrap">
-    <span>Dynamic Island para Windows · versão 1.0.0</span>
+    <span>Dynamic Island para Windows · versão 1.1.8</span>
     <nav class="foot-links" aria-label="Rodapé">
       <a href="index.html">Início</a>
       <a href="index.html#apoiar">Apoiar</a>
