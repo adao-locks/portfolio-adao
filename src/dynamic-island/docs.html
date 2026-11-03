@@ -24,7 +24,7 @@
       <a href="#privacidade">Privacidade</a>
       <a href="#por-dentro">Por dentro</a>
     </nav>
-    <a class="btn btn-primary btn-small download-link" href="https://github.com/adao-locks/DynamicIsland-releases/releases/download/v1.1.8/DynamicIslandSetup-1.1.8.exe">Baixar grátis</a>
+    <a class="btn btn-primary btn-small download-link" href="https://github.com/adao-locks/DynamicIsland-releases/releases/download/v1.2.2/DynamicIslandSetup-1.2.2.exe">Baixar grátis</a>
   </div>
 </header>
 
@@ -80,10 +80,10 @@
         <span class="eyebrow">Instalação</span>
         <h2>Passo a passo</h2>
         <p class="lead">O instalador está em português (troca para inglês se o Windows estiver em inglês) e instala só para o seu usuário.</p>
-        <p class="cta-meta">DynamicIslandSetup-1.1.8.exe · 49 MB</p>
+        <p class="cta-meta"><span data-release-file>DynamicIslandSetup-1.2.2.exe</span> · 49 MB</p>
       </div>
       <ol class="steps">
-        <li><div><h3>Baixe e abra o instalador</h3><p>O arquivo é <code>DynamicIslandSetup-1.1.8.exe</code>.</p></div></li>
+        <li><div><h3>Baixe e abra o instalador</h3><p>O arquivo é <code data-release-file>DynamicIslandSetup-1.2.2.exe</code>.</p></div></li>
         <li><div><h3>Se aparecer “O Windows protegeu o computador”</h3><p>Clique em <strong>Mais informações</strong> e depois em <strong>Executar assim mesmo</strong>. O SmartScreen avisa porque o instalador ainda não tem um certificado de assinatura de código (pago).</p></div></li>
         <li><div><h3>Escolha as opções</h3><p><strong>Iniciar o Dynamic Island junto com o Windows</strong> já vem marcado. Também dá para criar um ícone na área de trabalho e trocar a pasta de instalação.</p></div></li>
         <li><div><h3>Concluir</h3><p>Com “Abrir o Dynamic Island agora” marcado, a ilha aparece no topo da tela.</p></div></li>
@@ -227,7 +227,7 @@
 
 <footer>
   <div class="wrap">
-    <span>Dynamic Island para Windows · versão 1.1.8</span>
+    <span>Dynamic Island para Windows · versão <span data-release-version>1.2.2</span></span>
     <nav class="foot-links" aria-label="Rodapé">
       <a href="index.html">Início</a>
       <a href="index.html#apoiar">Apoiar</a>
@@ -242,5 +242,6 @@
     document.querySelectorAll(".download-link").forEach(a => { a.removeAttribute("download"); a.href = "#instalacao"; });
   }
 </script>
+<script src="assets/latest-release.js" defer></script>
 </body>
 </html>
