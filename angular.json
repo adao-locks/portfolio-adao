@@ -39,6 +39,11 @@
                 "glob": "**/*",
                 "input": "src/reportforge/",
                 "output": "/reportforge/"
+              },
+              {
+                "glob": "**/*",
+                "input": "src/certificados/",
+                "output": "/certificados/"
               }
             ],
             "styles": [
